@@ -63,4 +63,6 @@ namespace lab07_methods
         public int Age { get; set; }
         public void GetOlder() { Age++; }
     }
+
+
 }

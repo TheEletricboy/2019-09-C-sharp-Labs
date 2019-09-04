@@ -355,6 +355,132 @@ labs06
  ```
 
 ===========================================================================================================================
+#Naming
+
+camelCaseLikeThis		private fields
+PascalLikeThis			1) Methods (Verb: ie DoThis)
+						2)Class names (noun)
+						3)Properties 	public string Name{get;set;} 	Name is Pascal set
+
+_private field 			underscore prefix: clearly  tell everyone its private
+
+SQL_column_name_like_this	snake case
+
+File names and a Fodler names and Paths to folder
+
+	C:\Parent\Child\file1.txt 		PATH TO FOLDER
+
+		Avoid spaces ALWAYS!
+		"Strins with spaces in enclosed quotes!"
+
+html-web-page-always-write-like-this (kebab case)	(in the URL)
+	%20 means someone has put a space in a html page which is not good
+===========================================================================================================================
+
+# Constructor
+
+```c
+Class MyClass{
+	
+	private string NINO;
+	public string MyName{get;set;}
+	public string DateOfBirth{get;set}
+
+}
+
+var class01 = new MyClass();		//new keyword:invoking(calling) a special method called the CONSTRUCTOR METHOD
+									//CONSTRUCTOR: use it when constructiong a new object
+```
+
+Constructors are NOT INHERITED SO CHILD CONSTRUCTORS 
+
+Lab09
+
+#Constructor Summary
+
+Help us create new instances with a minimum of hard work
+They are NOT inherited
+default one is blank and is present initially. Must add it in if we create our own constructor and still want the default one present
+===========================================================================================================================
+
+#Overloading
+
+Method01(){}
+Method01(int x){}
+Method01(string y){}
+Method01(int x, string y){}
+
+				OVERLOADS OF THE SAME METHOD
+
+
+===========================================================================================================================
+
+#Polymorphism
+
+Interviews: favourite question
+				What are the 4 pillars of OOP?
+					1. Inheritance 	Parent=>Child 	class Child :Parent{}
+					2.Encapsulation 	private keyword to hide NINO data/ engineChassisID
+					3. Abstraction 	Public getter/setter methods to access and manipulate private data
+
+						Picture
+
+							Driver			Accelerator Pedal				Encapsulated Combustion Engine
+
+									driver is 'abstracted' from the middle layer(engine) by a pedal
+
+
+
+									instance 			public get/set 		private field
+															property
+					4. Polymorphism 
+
+
+#Polymorphism
+LAB11
+
+	Picture: Family
+		
+		Parents: virtual HaveAParty(){ //invite friends: dinner party}
+					(virtual: can override this idea if you want (optional))
+
+		Child5yrs: override HaveAParty(){//bouncy castle}
+					(override ==> child can optionallt replace method with own version)
+
+		Child10yrs: override HaveAParty(){//quasar}
+
+		Child18yrs : override HaveAParty(){//evening out}
+
+	MINOR SIDE NOTE: two keywords with similar uses here:
+						1) override
+						2) new		
+
+===========================================================================================================================
+
+#Rabbit Explosion
+
+class Rabbit{
+	string Name;
+	int Age;
+}
+
+List<Rabbit> rabbits
+
+	Thread.Sleep(2000); 1/5 secs
+	loop it 
+	Every loop, create a new rabbit and add to list of rabbits
+
+set a population limit and see how many iterations it takes to reach population limit
+
+===========================================================================================================================
+
+#Powershell CUSTOM COMMANDS
+
+1)	C:\Users\myname\ create a folder called PowershellScripts
+2)	text file called 'yourscript.ps1
+
+then edit it with sublime:
+3)	
 
 ===========================================================================================================================
 
