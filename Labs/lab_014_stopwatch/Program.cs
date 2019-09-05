@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics; //must have this 
+using System.IO;
 
 namespace lab_014_stopwatch
 {
@@ -23,6 +24,8 @@ namespace lab_014_stopwatch
             Console.WriteLine(s.Elapsed + " seconds");
             Console.WriteLine(s.ElapsedMilliseconds + " milliseconds");
             Console.WriteLine(s.ElapsedTicks + " pretty fast");
+
+            
         }
     }
 }

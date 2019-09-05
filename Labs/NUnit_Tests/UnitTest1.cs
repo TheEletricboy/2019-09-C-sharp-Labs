@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using lab_012_test_me_out;
+using lab_12_rabbit_explosion;
 
 namespace Tests
 {
@@ -11,11 +12,20 @@ namespace Tests
         }
 
         [Test]
-        public void Test1()
-        {
+        //public void Test1()
+        //{
 
-            var actual = TestMe
-            Assert.Fail();
+        //    var actual = TestMe
+        //    Assert.Fail();
+        //}
+
+        public void TestRabbitExplosion(int maxPop)
+        {
+            //arrange
+
+            //act
+            
+            //assert
         }
     }
 }
