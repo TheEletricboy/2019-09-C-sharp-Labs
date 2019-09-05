@@ -45,6 +45,10 @@ namespace lab_016_wpf_rabbit_explosion
             var randomColour = Label01.Background = new SolidColorBrush(Color.FromRgb((byte)r.Next(1, 255), (byte)r.Next(1, 255), (byte)r.Next(1, 233)));
         }
         
+
+
+
+
         
         static int counter = 0;
         private void Button01_Click(object sender, RoutedEventArgs e)

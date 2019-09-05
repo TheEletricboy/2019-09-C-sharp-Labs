@@ -35,15 +35,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NUnit_Tests", "NUnit_Tests\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_012_test_me_out", "lab_012_test_me_out\lab_012_test_me_out.csproj", "{7E50775D-20CD-4BC4-ADB0-4BA248FAFF5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_013_files", "lab_013_files\lab_013_files.csproj", "{D4892825-0080-4AD9-9652-C9C0007E8261}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_013_files", "lab_013_files\lab_013_files.csproj", "{D4892825-0080-4AD9-9652-C9C0007E8261}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_014_stopwatch", "lab_014_stopwatch\lab_014_stopwatch.csproj", "{0CE4F106-4872-4D38-8A10-6CBC46CFF063}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_014_stopwatch", "lab_014_stopwatch\lab_014_stopwatch.csproj", "{0CE4F106-4872-4D38-8A10-6CBC46CFF063}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_personall_test1", "lab_personall_test1\lab_personall_test1.csproj", "{F1537072-BB8D-4BE7-8698-43056807ECA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_personall_test1", "lab_personall_test1\lab_personall_test1.csproj", "{F1537072-BB8D-4BE7-8698-43056807ECA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_014_abstract_class", "lab_014_abstract_class\lab_014_abstract_class.csproj", "{99BC9878-092B-4E41-B970-CEA1181F52AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_014_abstract_class", "lab_014_abstract_class\lab_014_abstract_class.csproj", "{99BC9878-092B-4E41-B970-CEA1181F52AD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_016_wpf_rabbit_explosion", "lab_016_wpf_rabbit_explosion\lab_016_wpf_rabbit_explosion.csproj", "{1F337398-8254-456F-BFFC-3255A90A159A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_personal_Calculator_wpf", "lab_personal_Calculator_wpf\lab_personal_Calculator_wpf.csproj", "{561C6794-53FF-4E55-903A-831F568E0049}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -135,6 +137,10 @@ Global
 		{1F337398-8254-456F-BFFC-3255A90A159A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F337398-8254-456F-BFFC-3255A90A159A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F337398-8254-456F-BFFC-3255A90A159A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{561C6794-53FF-4E55-903A-831F568E0049}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{561C6794-53FF-4E55-903A-831F568E0049}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{561C6794-53FF-4E55-903A-831F568E0049}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{561C6794-53FF-4E55-903A-831F568E0049}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

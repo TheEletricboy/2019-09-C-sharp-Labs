@@ -1,0 +1,67 @@
+﻿<Window x:Class="lab_personal_Calculator_wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab_personal_Calculator_wpf"
+        mc:Ignorable="d"
+        Title="Miguel's Calculator" Height="430" Width="280">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+
+        </Grid.RowDefinitions>
+        
+        <!--Number Buttons now-->
+        <Button x:Name="Button07" Grid.Row="2" Grid.Column="0" Click="Button07_Click" BorderThickness="0"> 7</Button>
+        <Button x:Name="Button08" Grid.Row="2" Grid.Column="1" Click="Button08_Click" BorderThickness="0"> 8</Button>
+        <Button x:Name="Button09" Grid.Row="2" Grid.Column="2" Click="Button09_Click" BorderThickness="0"> 9</Button>
+        <Button x:Name="Button04" Grid.Row="3" Grid.Column="0" Click="Button04_Click" BorderThickness="0"> 4</Button>
+        <Button x:Name="Button05" Grid.Row="3" Grid.Column="1" Click="Button05_Click" BorderThickness="0"> 5</Button>
+        <Button x:Name="Button06" Grid.Row="3" Grid.Column="2" Click="Button06_Click" BorderThickness="0"> 6</Button>
+        <Button x:Name="Button01" Grid.Row="4" Grid.Column="0" Click="Button01_Click" BorderThickness="0"> 1</Button>
+        <Button x:Name="Button02" Grid.Row="4" Grid.Column="1" Click="Button02_Click" BorderThickness="0"> 2</Button>
+        <Button x:Name="Button03" Grid.Row="4" Grid.Column="2" Click="Button03_Click" BorderThickness="0"> 3</Button>
+        <Button x:Name="Button00" Grid.Row="5" Grid.Column="1" Click="Button00_Click" BorderThickness="0"> 0</Button>
+        <Button x:Name="Buttonay" Grid.Row="5" Grid.Column="2" Click="Button00_Click" BorderThickness="0">Miguel V.</Button>
+
+        <!--Math Buttons-->
+
+        <Button x:Name="ButtonPlus" Grid.Row="3" Grid.Column="3" Click="ButtonPlus_Click" FontSize="20" BorderThickness="0">+</Button>
+        <Button x:Name="ButtonMinus" Grid.Row="2" Grid.Column="3" Click="ButtonMinus_Click" FontSize="20" BorderThickness="0">-</Button>
+        <Button x:Name="ButtonTimes" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Left" Width="68" Click="ButtonTimes_Click" FontSize="20" BorderThickness="0">*</Button>
+        <Button x:Name="ButtonDivide" Grid.Row="4" Grid.Column="3" Click="ButtonDivide_Click" FontSize="20" BorderThickness="0">/</Button>
+        <Button x:Name="ButtonEquals" Grid.Row="5" Grid.Column="3" Click="ButtonEquals_Click" FontSize="20" BorderThickness="0">=</Button>
+        
+        <!--Clear Buttons-->
+
+        <Button x:Name="ButtonClearEntry" Grid.Row="1" Grid.Column="0" Click="ButtonClearEntry_Click" BorderThickness="0">CE</Button>
+        <Button x:Name="ButtonClear" Grid.Row="1" Grid.Column="1" Height="67" VerticalAlignment="Top" Click="ButtonClear_Click" BorderThickness="0">C</Button>
+        <Button x:Name="ButtonBackspace" Grid.Row="1" Grid.Column="2" Content="Delete Num." Click="ButtonBackspace_Click" BorderThickness="0"></Button>  
+        <!--this simply means '<=' because visual studio likes it like this(theres already a command like that)-->
+       
+        <!--Positive and Negative Button-->
+        <Button x:Name="ButtonPositiveNegative" Grid.Row="6" Grid.Column="0" Click="ButtonPositiveNegative_Click" BorderThickness="0">+-</Button>
+        
+        <!--Display the text Box-->
+
+        <TextBox x:Name="txtDisplay" IsReadOnly="True" VerticalAlignment="Bottom" HorizontalAlignment="Right" BorderThickness="0" FontSize="30" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" >0</TextBox>
+
+
+    </Grid>
+</Window>
