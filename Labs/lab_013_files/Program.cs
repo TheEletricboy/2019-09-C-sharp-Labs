@@ -44,7 +44,6 @@ namespace lab_013_files
             {
                 File.AppendAllText("myFile.log", $" Event happened at time {DateTime.Now}\n"); //perhaps adds to the file
                 System.Threading.Thread.Sleep(300);
-
             }
             File.AppendAllText("myFile.log", $"============================================================================");
 
@@ -53,6 +52,8 @@ namespace lab_013_files
 
             //Add add logging to your Rabbit app: Log the date, Time and Rabbit name for
             //each rabbit created
+
+
 
         }
     }

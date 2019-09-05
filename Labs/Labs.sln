@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_014_stopwatch", "lab_01
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_personall_test1", "lab_personall_test1\lab_personall_test1.csproj", "{F1537072-BB8D-4BE7-8698-43056807ECA6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_014_abstract_class", "lab_014_abstract_class\lab_014_abstract_class.csproj", "{99BC9878-092B-4E41-B970-CEA1181F52AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +125,10 @@ Global
 		{F1537072-BB8D-4BE7-8698-43056807ECA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1537072-BB8D-4BE7-8698-43056807ECA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1537072-BB8D-4BE7-8698-43056807ECA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99BC9878-092B-4E41-B970-CEA1181F52AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99BC9878-092B-4E41-B970-CEA1181F52AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99BC9878-092B-4E41-B970-CEA1181F52AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99BC9878-092B-4E41-B970-CEA1181F52AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

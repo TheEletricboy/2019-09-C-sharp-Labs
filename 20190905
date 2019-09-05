@@ -7,6 +7,53 @@ labs013
 using System.IO;	//Input Output
 
 ===========================================================================================================================
-#Adding Timing To your app to keep track of execution times
+#Adding Timing To your app to keep track of execution times(Stopwatch)
 
 lab014
+
+
+===========================================================================================================================
+
+##oop Continued
+
+#Abstract Classes
+	
+So far we have:
+
+	Class Mercedes{									class is a blueprint/template for new objects
+		private int _privateField;					field (private, encapsulated)
+
+		public string Name{get;set;}				property(public, provides abstraction layer in OOP 4 pillars)
+
+		public void DoThis(){}						Method(verb: action code)
+
+		public Mercedes(){}							Constructor: same as class
+	}
+
+	var instance = new Merces();					instance = new object from CLASS
+
+	A normal class is called a 'Concrete' class because we can create REA OBJECTS (REAL INSTANCES) from it.
+
+===========================================================================================================================
+#Mind picture for abstract classes
+
+Think about a holiday planning:
+```c
+		class holliday{
+			public void TravelPlans(){}
+
+			public void PlacesToVisit(){ cw("this list is now complete");}
+
+			public void Activities(){cw("All activities planned out");}				```
+									 |-----Code Implementation------|
+		}
+
+		One method has NO CODE implementation (no code 'BODY')
+
+			this method is 'Abstract', because it exists but has no code body.
+
+```c				what do do then?:
+									public abstract void TravelPlans();	
+
+``` 				
+					solution is to derive a sub-class inherit from abstract class 
