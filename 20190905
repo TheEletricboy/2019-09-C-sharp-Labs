@@ -1,0 +1,11 @@
+Thursday 05/09/2019
+
+#Working with Files
+labs013
+
+
+using System.IO;	//Input Output
+
+===========================================================================================================================
+#Adding Timing To your app to keep track of execution times
+
