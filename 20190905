@@ -56,4 +56,79 @@ Think about a holiday planning:
 									public abstract void TravelPlans();	
 
 ``` 				
-					solution is to derive a sub-class inherit from abstract class 
+					solution is to derive a sub-class inherit from abstract class:
+
+							Parent: Abstract 	public abstract void 
+
+
+=======================================================================================================================
+#Sealed Classes
+
+When dealing with security, it might not be a good idea that people can inherit from a secure class but then introduce vulnerabilities
+
+Think car engine: seal inside a secure chassis so amateurs dont mess up the engine and cause accidents
+
+Think CPU: discourage overclocking 
+```c
+	sealed class Security{
+
+	}
+
+//cannot inherit from this 
+```
+=======================================================================================================================
+#Extending a Sealed class
+
+String is a sealed class with lots if methods like this one:
+```c
+string x = "Hello World";
+            if (x.StartsWith("Hello"))
+            {
+                Console.WriteLine("World.");	//will print World.
+            }
+```
+but imagine we want our own string method!:
+
+public static class AddingToStrings{
+	public static void AmazingExtraStringMethod(this string s){
+	s = s + "-----"
+	}
+}
+
+=======================================================================================================================
+#WPF Application
+
+With this course we are going to have 3 areas of learning
+		
+		Console: Most of the learninghere! Core work
+
+		WPF: Screen which can place objectives: crude app
+
+							Goal:1)Business Interface
+								 2) Simple Images for Game (Crude)
+
+		Websites: Focus on business style application
+					Functionning Data Etc
+						A) ASP Regular Website
+						B) MVC Website
+
+WPF is Windows Presentation Foundation
+	
+		xml skeleton for GUI
+		C# Code behind
+
+				XML
+						<root>
+							<row>
+								<col attribute="dataherealso">data</col>
+							</row>
+							<row>
+								<col attribute="dataherealso">data</col>
+							</row>
+							<row>
+								<col attribute="dataherealso">data</col>
+							</row>
+						</root>
+					Microsoft LOVES XML
+
+					Everyone else uses Json

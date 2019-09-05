@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_personall_test1", "lab_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_014_abstract_class", "lab_014_abstract_class\lab_014_abstract_class.csproj", "{99BC9878-092B-4E41-B970-CEA1181F52AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_016_wpf_rabbit_explosion", "lab_016_wpf_rabbit_explosion\lab_016_wpf_rabbit_explosion.csproj", "{1F337398-8254-456F-BFFC-3255A90A159A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +131,10 @@ Global
 		{99BC9878-092B-4E41-B970-CEA1181F52AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99BC9878-092B-4E41-B970-CEA1181F52AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99BC9878-092B-4E41-B970-CEA1181F52AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F337398-8254-456F-BFFC-3255A90A159A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F337398-8254-456F-BFFC-3255A90A159A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F337398-8254-456F-BFFC-3255A90A159A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F337398-8254-456F-BFFC-3255A90A159A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
