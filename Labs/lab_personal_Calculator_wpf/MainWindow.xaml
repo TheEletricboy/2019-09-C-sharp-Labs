@@ -38,7 +38,7 @@
         <Button x:Name="Button02" Grid.Row="4" Grid.Column="1" Click="Button02_Click" BorderThickness="0"> 2</Button>
         <Button x:Name="Button03" Grid.Row="4" Grid.Column="2" Click="Button03_Click" BorderThickness="0"> 3</Button>
         <Button x:Name="Button00" Grid.Row="5" Grid.Column="1" Click="Button00_Click" BorderThickness="0"> 0</Button>
-        <Button x:Name="Buttonay" Grid.Row="5" Grid.Column="2" Click="Button00_Click" BorderThickness="0">Miguel V.</Button>
+        <Button x:Name="Buttonay" Grid.Row="5" Grid.Column="2" Click="Buttonay_Click" BorderThickness="0">Miguel V.</Button>
 
         <!--Math Buttons-->
 

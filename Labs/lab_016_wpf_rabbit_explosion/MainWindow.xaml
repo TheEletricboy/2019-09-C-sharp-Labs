@@ -22,10 +22,11 @@
 
 
         <Button x:Name="Button01" Background="#457396" Grid.Row="0" Grid.Column="0" FontFamily="Arial" FontSize="30" Click="Button01_Click" />
-        <Label x:Name="Label01" Grid.Row="0" Grid.Column="1" Content="R A B B I T" FontFamily="Arial" FontSize="30" 
+        <Label x:Name="Label01" Grid.Row="1" Grid.Column="0"  Grid.ColumnSpan="4" Grid.RowSpan="2" Content="R A B B I T" FontFamily="Arial" FontSize="30" 
          HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <Image x:Name="Rabbit01" Grid.Column="1" Grid.Row="1" Stretch="Uniform" Source="C:\Users\Miguel Vieira\Desktop\trabbit.png"/>
+        <Image x:Name="Rabbit01" Grid.Column="1" Grid.Row="2" Stretch="Uniform" Source="C:\Users\Miguel Vieira\Desktop\trabbit.png"/>
         <MediaElement  x:Name="Video01" Source="C:\Users\Miguel Vieira\Desktop\Howard The Alien ( BASS BOOSTED MAX) EARRAPE Alíen Meme.mp4" Grid.Column="3" />
+        
         <!--<MediaElement  x:Name="Sound01" Source="C:\Users\Miguel Vieira\Desktop\YeahBoy.wav"  />-->
 
         

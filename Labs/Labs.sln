@@ -47,6 +47,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_016_wpf_rabbit_explosio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_personal_Calculator_wpf", "lab_personal_Calculator_wpf\lab_personal_Calculator_wpf.csproj", "{561C6794-53FF-4E55-903A-831F568E0049}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_017_rabbit_database_explosion", "lab_017_rabbit_database_explosion\lab_017_rabbit_database_explosion.csproj", "{0CD368A6-27C7-4098-BAD4-CB59E4F59048}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Just_Do_It_12_Rabbit_Explosion_2", "Just_Do_It_12_Rabbit_Explosion_2\Just_Do_It_12_Rabbit_Explosion_2.csproj", "{05FC7BA4-EBA9-4036-9D4B-AA521597F083}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -141,6 +145,14 @@ Global
 		{561C6794-53FF-4E55-903A-831F568E0049}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{561C6794-53FF-4E55-903A-831F568E0049}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{561C6794-53FF-4E55-903A-831F568E0049}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CD368A6-27C7-4098-BAD4-CB59E4F59048}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CD368A6-27C7-4098-BAD4-CB59E4F59048}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CD368A6-27C7-4098-BAD4-CB59E4F59048}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CD368A6-27C7-4098-BAD4-CB59E4F59048}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05FC7BA4-EBA9-4036-9D4B-AA521597F083}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05FC7BA4-EBA9-4036-9D4B-AA521597F083}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05FC7BA4-EBA9-4036-9D4B-AA521597F083}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05FC7BA4-EBA9-4036-9D4B-AA521597F083}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

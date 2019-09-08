@@ -1,0 +1,148 @@
+Friday 20190906
+
+#Static
+
+	class MyClass{
+		private int _hideMe;	//private field(oop encapsulation)
+
+		public string Name {get;set;}	//public property (oop abstraction)
+
+		public void DoThis();
+	}
+
+	abstract class Idea{
+		abstract void DoThis();	//no code body or implementation
+	}
+
+	class SolidThoughts : Idea{
+		override voi DoThis();
+	}
+
+	OOP ABSTRACT 
+
+	CLASS ==> cannot instanciate
+	CONCRETE(regular) ==> can instantiate
+
+		var m = new MyClass();
+
+	OOP Polymorphism
+
+						Parent: Virtual (has a code body)
+						Child: Override (optional)
+
+	OOP Abstract
+						Parent: abstract (its empty)
+						Child: override (mandatory)
+
+	OOP Inheritance
+
+		access modifiers: public, private, protected, internal
+
+			public: see from anywhere
+			private: hidden inside class
+			protected: hidden inside class and all child classes
+			internal: within compiled exe: visible in this scope
+
+					library MULIBRARY.DLL
+
+						internal: use within this DLL but not outside it
+
+#Static
+
+	class MyClass{
+		private int _hiddenField;				instance
+		public string Property01{get;set;}		instance
+		public void Method01();					instance
+
+		public MyClass(){}	//constructor
+	}
+
+	var m = new MyClass(){}		//constructor
+		m = instance
+			m.Property01;
+			m.Method01;
+
+	Math.PI
+	Math.Random()
+	Math.Round()
+					Static members attached directly to the Math Class
+
+	class MyClass{
+		static public int Property01{get;set;}	Class/static
+		static public void DoThis(){}			class/static
+	}
+
+	MyClass.Property01;
+	MyClass.DoThis;
+						DONT CHANGE WITH RELATION TO INSTANCES 
+
+
+===========================================================================================================================
+#SQL (structured Query Language)
+
+Relational Database:
+
+	Microsfot		MS-SQL (paid product)
+	Free 			MYSQL (free!)
+
+Relational Database:
+
+	Tables
+		ID;
+		Fields;
+	User
+		UserId;
+		Username;
+	Category
+		CategoryId;
+		CategoryName;
+
+	We can create RELATIONSHIPS:
+
+	User
+		UserId;
+		UserName;
+		CategoryId;	//FOREIGN KEY(Id in anotehr table)
+
+	Id 'IDENTITY' ==> Unique, Auto-Increment to the highest value
+
+Proposal TOday:
+	SQL: Create database with rabbit tables
+	Entity: C# ==> hook into this database
+				   view, update rabbits
+
+===========================================================================================================================
+#SQL Commands
+
+	View => Server Explorer => Data Connection, add (localdb)\mssqllocaldb
+	View => SQL Object Explorer
+
+		Gives access to the local computer using SQL server
+
+		Files called (...).mdf MICROSFOT DATABASE FILE
+		Stored in C:\Users\%username%\ folder
+
+
+===========================================================================================================================
+#Connecting to a Database
+
+Microsoft can connect to a data base using Entity FrameWork.
+
+EF6		: Frame work
+RFCore	: Lighter, more open source
+
+if we use EF6 theres more support so it's easier to get going
+
+New Console App (framework)
+Add Entity
+Connect to Database
+View rabbits
+
+===========================================================================================================================
+#HomeWork
+New WPF Just_Do_It_12_Rabbit_Explosion using .NETFramework
+add 2 text boxes and an ADD button
+Add entity
+When you click the ADD button,
+	ADD a new rabbit
+	Display a rabbit picture for one second

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Media;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace lab_personal_Calculator_wpf
 {
@@ -24,12 +26,20 @@ namespace lab_personal_Calculator_wpf
         long number2 = 0;
         string operation = "";
 
+        
 
 
         public MainWindow()
         {
             InitializeComponent();
+            
         }
+
+
+
+
+        
+
 
 
 
@@ -174,6 +184,9 @@ namespace lab_personal_Calculator_wpf
             }
         }
 
+        //====================================================================
+        //=================OPERATIONS BUTTONS=================================
+
         private void ButtonPlus_Click(object sender, RoutedEventArgs e)
         {
             operation = "+";
@@ -267,6 +280,13 @@ namespace lab_personal_Calculator_wpf
                 number2 *= -1;
                 txtDisplay.Text = number2.ToString();
             }
+        }
+
+        private void Buttonay_Click(object sender, RoutedEventArgs e)
+        {
+            //SoundPlayer sd = new SoundPlayer();
+            //sd.SoundLocation = MapPath("C:\Users\Miguel Vieira\Desktop\YeahBoy.wav");
+            //sd.Play();
         }
     }
 }
