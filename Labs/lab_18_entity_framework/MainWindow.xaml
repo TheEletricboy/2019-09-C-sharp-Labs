@@ -56,7 +56,9 @@
         <TextBox x:Name="txtAddress" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" Margin="10,10,10,0" Height="27" VerticalAlignment="Top"/>
 
 
-        <DataGrid x:Name="DgvCustomer" OverridesDefaultStyle="True" Background="Gray" BorderThickness="1" BorderBrush="Black" ItemsSource="{Binding}" Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="5" SelectionChanged="CustomerGrid_SelectionChanged" Margin="10,0,10,10" Height="214" VerticalAlignment="Bottom" />
+        <DataGrid x:Name="DgvCustomer" ItemsSource="{Binding Customers}" OverridesDefaultStyle="True" Background="Gray" BorderThickness="1" BorderBrush="Black" 
+                  Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="5" SelectionChanged="CustomerGrid_SelectionChanged" 
+                  Margin="10,0,10,10" Height="214" VerticalAlignment="Bottom" />
 
 
 
