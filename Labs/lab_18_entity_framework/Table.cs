@@ -12,7 +12,7 @@ namespace lab_18_entity_framework
     using System;
     using System.Collections.Generic;
     
-    public partial class Customer
+    public partial class Table
     {
         public int CustomerId { get; set; }
         public string FirstName { get; set; }

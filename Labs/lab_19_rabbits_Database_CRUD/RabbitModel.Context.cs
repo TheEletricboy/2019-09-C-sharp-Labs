@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace lab_18_entity_framework
+namespace lab_19_rabbits_Database_CRUD
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DBEntities : DbContext
+    public partial class RabbitDbEntities : DbContext
     {
-        public DBEntities()
-            : base("name=DBEntities")
+        public RabbitDbEntities()
+            : base("name=RabbitDbEntities")
         {
         }
     
@@ -25,6 +25,6 @@ namespace lab_18_entity_framework
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<Rabbit> Rabbits { get; set; }
     }
 }

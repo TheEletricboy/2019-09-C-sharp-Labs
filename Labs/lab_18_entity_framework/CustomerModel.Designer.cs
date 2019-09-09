@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\GitLocal\2019-09-C-sharp-Labs\Labs\lab_18_entity_framework\EFDB.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\2019-09-C-sharp-Labs\Labs\lab_18_entity_framework\CustomerModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

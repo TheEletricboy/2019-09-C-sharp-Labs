@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:lab_18_entity_framework"
         mc:Ignorable="d"
-        Title="User Add" Height="450" Width="800">
+        Title="User Add" Height="450" Width="800" Background="Black">
     <Grid>
         <Grid.ColumnDefinitions>
 
@@ -41,13 +41,13 @@
         <Button x:Name="btnDelete" Content="Delete" Background="#000000" Grid.Row="7" Grid.Column="3" Foreground="White" FontFamily="Arial" FontSize="15" Click="btnDelete_Click" />
         <Button x:Name="btnCancel" Background="#000000" Grid.Row="7" Grid.Column="5" Foreground="White" FontFamily="Arial" FontSize="15" Click="btnCancel_Click" Content="Cancel" />
 
-        <Label x:Name="Label01" Grid.Row="1" Grid.Column="0"  Content="First Name" FontFamily="Arial" FontSize="15" 
+        <Label x:Name="Label01" Foreground="White" Grid.Row="1" Grid.Column="0"  Content="First Name" FontFamily="Arial" FontSize="15" 
          HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-        <Label x:Name="Label02" Grid.Row="2" Grid.Column="0"  Content="Last Name" FontFamily="Arial" FontSize="15" 
+        <Label x:Name="Label02" Foreground="White" Grid.Row="2" Grid.Column="0"  Content="Last Name" FontFamily="Arial" FontSize="15" 
          HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-        <Label x:Name="Label03" Grid.Row="3" Grid.Column="0"  Content="City" FontFamily="Arial" FontSize="15" 
+        <Label x:Name="Label03" Foreground="White" Grid.Row="3" Grid.Column="0"  Content="City" FontFamily="Arial" FontSize="15" 
          HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-        <Label x:Name="Label04" Grid.Row="4" Grid.Column="0"  Content="Address" FontFamily="Arial" FontSize="15" 
+        <Label x:Name="Label04" Foreground="White" Grid.Row="4" Grid.Column="0"  Content="Address" FontFamily="Arial" FontSize="15" 
          HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
 
         <TextBox x:Name="txtFirstName" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Margin="10,0,10,10" Height="27" VerticalAlignment="Bottom"/>
@@ -55,8 +55,13 @@
         <TextBox x:Name="txtCity" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Margin="10,10,10,0" Height="27" VerticalAlignment="Top"/>
         <TextBox x:Name="txtAddress" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" Margin="10,10,10,0" Height="27" VerticalAlignment="Top"/>
 
+        <DataGrid x:Name="DgvCustomer" Background="Gray" BorderThickness="1" BorderBrush="Black" 
+                  ItemsSource="{Binding}" 
+                  Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="5" 
+                   
+                  Margin="10,0,10,10" Height="214" VerticalAlignment="Bottom" SelectionChanged="DgvCustomer_SelectionChanged" />
 
-        <DataGrid x:Name="DgvCustomer" OverridesDefaultStyle="True" Background="Gray" BorderThickness="1" BorderBrush="Black" ItemsSource="{Binding}" Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="5" SelectionChanged="CustomerGrid_SelectionChanged" Margin="10,0,10,10" Height="214" VerticalAlignment="Bottom" />
+
 
 
 

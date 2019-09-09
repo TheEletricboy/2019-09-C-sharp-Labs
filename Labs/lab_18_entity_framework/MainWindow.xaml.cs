@@ -22,15 +22,16 @@ namespace lab_18_entity_framework
     public partial class MainWindow : Window
     {
 
-        public Customer model01 = new Customer();
+        public Table model01 = new Table();
 
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         
-
+        
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
@@ -54,29 +55,45 @@ namespace lab_18_entity_framework
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            
-            model01.FirstName = txtFirstName.Text.Trim(); //trim is used to remove white spaces from the left and right sides of the txtBox
-            model01.LastName = txtLastName.Text.Trim();
-            model01.City = txtCity.Text.Trim();
-            model01.Address = txtAddress.Text.Trim();
+            var obj = new Table();
+            obj.FirstName = txtFirstName.Text.Trim(); //trim is used to remove white spaces from the left and right sides of the txtBox
+            obj.LastName = txtLastName.Text.Trim();
+            obj.City = txtCity.Text.Trim();
+            obj.Address = txtAddress.Text.Trim();
 
-            using (DBEntities db = new DBEntities())
+            //model01.FirstName = txtFirstName.Text.Trim(); //trim is used to remove white spaces from the left and right sides of the txtBox
+            //model01.LastName = txtLastName.Text.Trim();
+            //model01.City = txtCity.Text.Trim();
+            //model01.Address = txtAddress.Text.Trim();
+
+            using (EFDBEntities db = new EFDBEntities())
             {
-                db.Customers.Add(model01);
+                db.Tables.Add(obj);
                 db.SaveChanges();
+                var userToUpdate = db.Tables.Find(obj.CustomerId);
             }
             Clear();
             MessageBox.Show("Submited Successfully!");
         }
 
-        private void CustomerGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
+        
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void DgvCustomer_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //DataGridTextColumn textColumn = new DataGridTextColumn();
+            //textColumn.Header = "First Name";
+            //textColumn.Binding = new Binding("FirstName");
+            //DgvCustomer.Columns.Add(textColumn);
+        }
+
+        void PopulateDataGridView()
+        {
+            
         }
     }
 }

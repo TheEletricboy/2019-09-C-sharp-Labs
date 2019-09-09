@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_017_rabbit_database_exp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_18_entity_framework", "lab_18_entity_framework\lab_18_entity_framework.csproj", "{2A938266-9A51-417E-B55B-1FE454E38C3D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_19_rabbits_Database_CRUD", "lab_19_rabbits_Database_CRUD\lab_19_rabbits_Database_CRUD.csproj", "{5E39EB53-577D-416C-8E48-AF9DEFAE4CE7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,6 +155,10 @@ Global
 		{2A938266-9A51-417E-B55B-1FE454E38C3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A938266-9A51-417E-B55B-1FE454E38C3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A938266-9A51-417E-B55B-1FE454E38C3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E39EB53-577D-416C-8E48-AF9DEFAE4CE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E39EB53-577D-416C-8E48-AF9DEFAE4CE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E39EB53-577D-416C-8E48-AF9DEFAE4CE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E39EB53-577D-416C-8E48-AF9DEFAE4CE7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
