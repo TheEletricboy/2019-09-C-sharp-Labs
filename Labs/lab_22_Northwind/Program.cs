@@ -27,7 +27,8 @@ namespace lab_22_Northwind
             //categories
 
             //Products with category name 
-            products.ForEach(p => { Console.WriteLine($"ID: {p.ProductID, -10} Name: {p.ProductName, -30} CategoryID from Category table: {p.Category.CategoryID}"); });
+            products.ForEach(p => { Console.WriteLine($"ID: {p.ProductID, -10} Name: {p.ProductName, -30} " +
+                $"CategoryID from Category table: {p.Category.CategoryName}"); });
             //we access the categroy table because Customer table is connected to it
         }   
 
