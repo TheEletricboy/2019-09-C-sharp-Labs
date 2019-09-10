@@ -1,0 +1,8 @@
+##Linq (DOWNLOAD NORTHWIND DATA BASE FROM GITHUB, instnwnd.sql download onto Sublime and save it as InstallNorthwind.sql in our SQL labs folder in c:/)
+	
+	Linq is a special language gennerated by Microsoft to read databases.
+
+	Linq has 2 typer:
+		from c in customers
+		where c.City="Berlin"
+		select c

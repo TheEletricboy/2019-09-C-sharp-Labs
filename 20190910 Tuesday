@@ -1,0 +1,85 @@
+20190910 Tuesday
+
+####Morning review
+
+#Agile Manifesto:
+	People over processes
+	Working code over documentation
+	Collaboration over negociation
+
+
+	Scrum: Pillars:
+
+		Transpanrency, Inspection, Adaptation
+
+					Scrum Master: Admin/keep focus and remove blockers
+					Product owner: 1) owns the backlog 2) Liaise with customer
+					Dev: 3-9 self organizing
+
+				Backlog: List of requirements for complete project
+				sprint backlog: mini list of requirements for just this sprint
+				sprint: 1-4 weeks, focused work.
+				Goal of sprint: Implement a new feature: release: new increment of version
+					breaking change: 1.0, 2.0, 3.0
+
+					Version increment: 3.1, 3.2
+
+#Kanban:JIT just in time: minimise wast on 24/7 maneufacturing
+		   Work flow for continous models. Limit active work in progress
+
+#Water fall method: traditional model: good for fixed or small repeatable projects unlikely to change: building, engineering, military
+	SDLC: 	Requirements
+			Analysis
+			Design
+			Build
+			Test
+			Release
+			Maintain
+			Document
+			V-Model: Critical grade systems where eg life is at stake extra testing at each stage
+
+Unit Testing: 	test individual units (Modules) of code (smallest level)
+Integration testing: join modules together
+System testing: overall system
+UAT User Acceptance Testing: user validates that our code meets the agreed 'list of requirements'
+Feasability study: initital guidance to client: is project feasable a) Technical b) Financial
+
+#Alpha release: 
+first upfront initial release: often by invitation only. To journalists, industry specialists, perhaps other stakeholders
+#Beta:
+Final release before production version is ready. Used to provide:	 a) customers with free demo
+																	 b)Production company gets free feedback
+
+
+#Regression testing
+Insures when you build a new feature for a fixed bug this does not break the existing code
+
+#White box testing: Allows testing with detailed knowledge of coding
+#Black box testing: inputs/only: know nothing about code
+
+#RGB testing: Red) tests fail, Green) pass test, Refractor) Optimize
+#Minify Code: make as small as possible
+jqueryL original code
+jquery.min.js: minified code
+
+===========================================================================================================================
+
+##OOP
+Inheritance: child inherits parents' functions/variables without showing them (parent: base class. child: derived class)
+Method: a function that completes various tasks
+Field: private variable
+Constructor: create new instances with a minimum hard work, without inheritance
+Overloading: same method with different parameters
+Class: blueprint or object
+abstract method: public abstract void DoThis(); has no body
+Abstract Class: a class with one or more abstract methods. CANNOT INSTANCIATE, must derive a child class which implements all methods then you can instanciate
+Concrete class: standart class with standart methods CAN INSTANCIATE
+Encapsulation: private members
+Member: 4 Access modifier 1) private 2) public 3)protected 4)internal
+		meaning: fields, property, methods, events
+Polymorphism: inherit from parent but can optionally override
+
+
+
+
+===========================================================================================================================
