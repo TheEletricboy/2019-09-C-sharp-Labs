@@ -21,7 +21,8 @@ namespace lab_22_Northwind
 
             }
             products.ForEach(p => {
-                Console.WriteLine($"ID: {p.ProductID, -5} Name: {p.ProductName, -35} Unit Price: {p.UnitPrice,-15} Discontinued: {p.Discontinued,-35}");
+                Console.WriteLine($"ID: {p.ProductID, -5} Name: {p.ProductName, -35} " +
+                    $"Unit Price: {p.UnitPrice,-15} Discontinued: {p.Discontinued,-35}");
             });
             Console.WriteLine("===================================================================================");
             //categories

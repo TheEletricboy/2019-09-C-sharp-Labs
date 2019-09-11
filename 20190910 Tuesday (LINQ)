@@ -6,3 +6,4 @@
 		from c in customers
 		where c.City="Berlin"
 		select c
+
