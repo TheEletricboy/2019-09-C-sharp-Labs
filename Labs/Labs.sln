@@ -63,6 +63,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_22_Northwind", "lab_22_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_23_linq", "lab_23_linq\lab_23_linq.csproj", "{EE807250-6012-4CA9-A114-AB9A213C0CCB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_24_customers_app", "lab_24_customers_app\lab_24_customers_app.csproj", "{9C84353E-285D-4432-908C-03422654B70E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -189,6 +191,10 @@ Global
 		{EE807250-6012-4CA9-A114-AB9A213C0CCB}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{EE807250-6012-4CA9-A114-AB9A213C0CCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE807250-6012-4CA9-A114-AB9A213C0CCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C84353E-285D-4432-908C-03422654B70E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C84353E-285D-4432-908C-03422654B70E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C84353E-285D-4432-908C-03422654B70E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C84353E-285D-4432-908C-03422654B70E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

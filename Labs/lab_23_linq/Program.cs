@@ -11,6 +11,7 @@ namespace lab_23_linq
     class Program
     {
         static List<Customer> customers;
+  
 
         static void Main(string[] args)
         {
@@ -23,6 +24,8 @@ namespace lab_23_linq
             using (var db = new NorthwindEntities())
             {
                 //customers = db.Customers.ToList();
+                db.Orders.ToList();
+                db.Order_Details.ToList();
 
                 //Cannot print this
                 //LINQ produces output of type IQueriable 
@@ -56,7 +59,47 @@ namespace lab_23_linq
                     .ThenBy(c => c.ContactName)
                     .ToList();
                 PrintCustomers(LINQOrderByThenBy);
+                Console.WriteLine("\n\n Creating a custom output object\n");
+                var customObect =
+                    from c in db.Customers
+                    join order in db.Orders
+                        on c.CustomerID equals order.CustomerID
+                    select new
+                    {
+                        Name = c.ContactName,   //have to equals it if the 2 names are different
+                        OrderID = order.OrderID,    //i could take OrderID from the begining and nothing would change because theyre the same
+                        OrderDate = order.OrderDate,
+                        order.ShipCity
+                    };
+                customObect.ToList().ForEach(item => Console.WriteLine($"{item.Name, -20}{item.OrderID, -10}" +
+                    $" {item.OrderDate: dd/MM/yyyy}   {item.ShipCity}"));
+
+
+                //slick version: print only
+                //print customer name, city berlin, order ID, order date, 
+                db.Orders.Where(o => o.Customer.City == "Berlin").ToList().ForEach(p => {
+                    Console.WriteLine($"{p.Customer.ContactName,-20}{p.Customer.City,-30}{p.OrderID, -15}{p.OrderDate: dd/mm/yyyy}");
+                });
+
+                //join 3 tables: order details, orders and customers
+                db.Order_Details.Where(od => od.Order.Customer.City == "Berlin").ToList().ForEach(od => {
+                    Console.WriteLine($"{od.Order.Customer.ContactName, -20}{od.Order.Customer.City, -15}{od.OrderID, -15}" +
+                        $"{od.ProductID, -15}{od.Order.OrderDate: dd/mm/yyy}");
+                });
+
+                //get to the product table
+                db.Order_Details.Where(od => od.Order.Customer.City == "Berlin").ToList().ForEach(od => {
+                    Console.WriteLine($"{od.Order.Customer.ContactName,-20}{od.Order.Customer.City,-15}{od.OrderID,-15}" +
+                        $"{od.ProductID,-15}{od.Order.OrderDate: dd/mm/yyy}      {od.Product.ProductName, -25}");
+                });
+
             }
+
+
+
+
+
+
         }
 
         //hashing helps make the code cleaner
