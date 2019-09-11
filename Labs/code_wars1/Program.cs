@@ -11,19 +11,7 @@ namespace code_wars1
 
         public static double FindAverage(double[] array)
         {
-            int arrAmount = 0;
-            int sum = array.Sum();
-            for (int i = 0; array.length; i++)
-            {
-                arrAmount += array[i];
-            }
-
-            decimal result = (decimal)sum / customerssalary.Length;
-            return result;
-
-
-            // Your code here
-            return 0;
+            return -1;
         }
     }
 }

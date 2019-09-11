@@ -8,8 +8,8 @@ namespace lab11_polymorphism
         {
             var dad01 = new Dad(24, "Me name is dad");
             dad01.AgeChange();
-            
-            var child01 = new Child();
+
+            var child01 = new Child(2, "name");
             child01.AgeChange();
 
             Console.WriteLine($"the dads age is{dad01.Age} and the child is {child01.Age}");
@@ -53,7 +53,7 @@ namespace lab11_polymorphism
             }  
             public Child(int age, string name) : base(age, name)
             {
-               // this.Age = 10;
+               //this.Age = 10;
             }
         }
     }
