@@ -98,5 +98,10 @@ namespace lab_24_customers_app
 
             }
         }
+
+        private void ListBoxCustomers_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

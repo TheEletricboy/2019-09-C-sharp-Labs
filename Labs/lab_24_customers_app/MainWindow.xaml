@@ -94,7 +94,9 @@
 
 
             <ListBox x:Name="ListBoxCustomers"  
-                     HorizontalContentAlignment="Center">
+                     HorizontalContentAlignment="Center" 
+                     SelectionChanged="ListBoxCustomers_SelectionChanged"
+                     MouseDoubleClick="ViewOrders">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <TextBlock>
