@@ -91,9 +91,9 @@ jquery.min.js: minified code
 #Polymorphism: inherit from parent but can optionally override
 
 #4 Pillars of OOP:
-		Encapsulation
-		Inheritance
-		Polymorphism
+		Encapsulation (encapsulating a variable inside a class)
+		Inheritance (variables from a parent class that can be accessed within the child class)
+		Polymorphism (parent class values can be overriten within the child class)
 		Abstraction: PUBLIC PROPERTIES to INTERACT with ENCAPSULATED members
 
 #Abstract Class 				Class with one or more abstract methods

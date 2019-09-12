@@ -98,10 +98,30 @@ namespace lab_24_customers_app
 
             }
         }
+        private void CitySearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            using (var db = new NorthwindEntities())
+            {
+                ListBoxCustomers.ItemsSource = customers.Where(c => c.City.Contains(CitySearch.Text)).ToList();
+
+            }
+        }
 
         private void ListBoxCustomers_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
+
+        private void ListBoxCity_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void CitySearch_KeyUp(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        
     }
 }

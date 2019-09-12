@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:lab_24_customers_app"
         mc:Ignorable="d"
-        Title="MainWindow" Height="Auto" Width="Auto" FontSize="18">
+        Title="MainWindow" Height="Auto" Width="Auto" FontSize="18" FontFamily="Courier New">
     <Grid Background="#E6EEFF">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
@@ -89,19 +89,26 @@
             <TextBox x:Name="CustomerSearch" 
                      KeyUp="CustomerSearch_KeyUp" 
                      HorizontalAlignment="Stretch" 
-                     HorizontalContentAlignment="Center" TextChanged="CustomerSearch_TextChanged" />
+                     HorizontalContentAlignment="Center" 
+                     TextChanged="CustomerSearch_TextChanged" />
 
+            <TextBox x:Name="CitySearch" 
+                     KeyUp="CitySearch_KeyUp" 
+                     HorizontalAlignment="Stretch" 
+                     HorizontalContentAlignment="Center" 
+                     TextChanged="CitySearch_TextChanged" />
 
-
+            <!--MouseDoubleClick="ViewOrders"-->
             <ListBox x:Name="ListBoxCustomers"  
                      HorizontalContentAlignment="Center" 
                      SelectionChanged="ListBoxCustomers_SelectionChanged"
-                     MouseDoubleClick="ViewOrders">
+            
+                     >
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <TextBlock>
                             <TextBlock.Text>
-                                <MultiBinding StringFormat=" {0, -25}{1, -25}{2, -25}">
+                                <MultiBinding StringFormat=" {0, -20}{1, -20}{2, -25}">
                                     <Binding Path="CustomerID"/>
                                     <Binding Path="ContactName"/>
                                     <Binding Path="City"/>
@@ -116,9 +123,12 @@
         </StackPanel>
 
         <Button x:Name="ButtonBack" Content="Back" 
-                Background="#D3D9E0" Grid.Row="4" Grid.Column="1" Click="ButtonBack_Click"/>
+                Background="#D3D9E0" Grid.Row="4" Grid.Column="1" 
+                Click="ButtonBack_Click" Margin="28,29.2,26,29.6"/>
         <Button x:Name="ButtonForward" Content="Forward" 
-                Background="#D3D9E0" Grid.Row="4" Grid.Column="3" Click="ButtonForward_Click"/>
+                Background="#D3D9E0" Grid.Row="4" 
+                Grid.Column="3" Click="ButtonForward_Click"
+                Margin="27.2,29.2,26.8,29.6"/>
 
 
 
