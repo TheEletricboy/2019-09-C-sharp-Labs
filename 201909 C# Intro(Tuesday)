@@ -420,7 +420,7 @@ Method01(int x, string y){}
 Interviews: favourite question
 				What are the 4 pillars of OOP?
 					1. Inheritance 	Parent=>Child 	class Child :Parent{}
-					2.Encapsulation 	private keyword to hide NINO data/ engineChassisID
+					2. Encapsulation 	private keyword to hide NINO data/ engineChassisID
 					3. Abstraction 	Public getter/setter methods to access and manipulate private data
 
 						Picture

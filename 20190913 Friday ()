@@ -1,0 +1,41 @@
+## Plans for next week
+
+Monday:??
+
+Tuesday: Interview Prep
+
+Wed-Frid: 
+			CARE!!!
+				User Story: Create Descriptions of what your game can/will do ??Trello?? create 'cards' in Trello for your game 'user stories'
+
+				Agile:
+					MVP Minimum Viable Product ie go simple initially and get it working in
+					basic form
+					V2 => Add functionality 
+					Play it cautions with your goals.
+				Professionalism!!!: 
+					Super polite,try not to be jokey with other people
+
+## HTML CSS and Javascript
+
+# Modern Web
+
+Lets begin the day with a little "chekc the end from the beginning"
+
+Web is so exciting there is lots to explore
+
+HTML <html><p>this is a paragraph</html>
+
+	<tag> 
+	<img src= "html......" width="200" height="200" />	src is called an attribute the tag
+
+	HTML: Hyper Text Markup Language ==> Skeleton for your page
+
+		Structure
+
+			Fixed Content
+
+# Quick tabs
+
+h1#name = <h1 id="name"></h1> 
+h1.name = <h1 class="name"></h1>
