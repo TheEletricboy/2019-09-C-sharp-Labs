@@ -1,0 +1,86 @@
+## Plans for next week
+
+Monday:??
+
+Tuesday: Interview Prep
+
+Wed-Frid: 
+			CARE!!!
+				User Story: Create Descriptions of what your game can/will do ??Trello?? create 'cards' in Trello for your game 'user stories'
+
+				Agile:
+					MVP Minimum Viable Product ie go simple initially and get it working in
+					basic form
+					V2 => Add functionality 
+					Play it cautions with your goals.
+				Professionalism!!!: 
+					Super polite,try not to be jokey with other people
+
+## HTML CSS and Javascript
+
+# Modern Web
+
+Lets begin the day with a little "chekc the end from the beginning"
+
+Web is so exciting there is lots to explore
+
+HTML <html><p>this is a paragraph</html>
+
+	<tag> 
+	<img src= "html......" width="200" height="200" />	src is called an attribute the tag
+
+	HTML: Hyper Text Markup Language ==> Skeleton for your page
+
+		Structure
+
+			Fixed Content
+
+# Quick tabs
+
+h1#name = <h1 id="name"></h1> 
+h1.name = <h1 class="name"></h1>
+
+# Bootstrap
+
+Building raw from HTML can be very time consuming
+its much better to find an amazing template online 
+
+Bootstrap also provides amazing ways to get started quickly on a website.
+It provides all code for free and you just drop the code in
+
+1) go to bootstrap.com
+2) copy the starter template
+
+
+# Node JS
+
+Javascript took over the web because Netscape Navigator ivented it, but everyone adopted it.
+
+Today javascript powers most if not all of our browsers 
+
+BUT! Smart people from google took java script out of the browser and made it to run standalone as an application which we now call NodeJS.
+
+NodeJS ==> Just Java script without the browser
+
+
+# Build a Node Server
+
+When using Node.js we can reference existing libraries.
+
+To install them use the commands in powershell:
+		npm install <<library name>>
+Global instal (all of windows) add -g
+
+The unse the library with:
+
+	var myVariable = require('<<library-name>>')
+
+ie:	var http = require('http')
+
+# ReactJS
+
+ReactJS builds a VIRTUAL WEB PAGE, then displays it as a REAL WEB PAGE.
+
+React can JUST UPDATE  THE BITS WHICH HAVE CHANGED, MAKING DYNAMIC PAGES FASTER
+
+Manual React Page
