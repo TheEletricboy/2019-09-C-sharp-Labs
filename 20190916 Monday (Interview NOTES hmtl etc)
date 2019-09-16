@@ -1,0 +1,61 @@
+## Interview Prep
+
+#JavaScript: language that runs on the BROWSER
+
+#Node.js: javascript that runs on a computer
+
+#Library: import code from other people
+
+#getElement ById/ClassName/Tag: 1 element or array of elements
+
+#class: many items
+
+#id: one item
+
+#<p class='myClass1' myClass2 myClass3 		CSS: .yClass1
+#<p id="myid"								CSS: #Myid
+
+
+
+#Style tag in CSS:
+
+	Inline: 	<p style="background-color:red;"
+	Internal: 	<style> in HEAD normally
+	External: 	style.css 	link with <link href="style.css" rel="stylesheet">
+#Script tag in CSS:
+	
+	INLINE: 	<button onclick="alert('hi')">
+	Internal:	<script></script>
+	EXTERNAL: 	index.js
+
+
+
+
+
+
+===========================================================================================================================
+# Libraries:
+			angular: google {{data}}
+			react: facebook: render a virtual 'Dom'
+			jquery: old
+			vue: best of react and angular
+			lodash: arrays
+			momwnrJS: time/Date
+
+#DOM: 	(Document Object Model: structure of a HTML page)
+
+	HTML
+		HEAD
+		BODY
+			DIV
+				H1
+				p
+
+# Person's name: Mark Paramor: LINKEDIN??? Experience, current role
+	b) Accedo: jobs on the internet (CHECK), terminology
+	c)Accedo: website:
+						1)Products they sell
+						2)on their blog, new projects they are doing
+						3)number of people
+						4)they are global (yes they are)
+						5) Channel 4: job specs

@@ -62,7 +62,6 @@ Insures when you build a new feature for a fixed bug this does not break the exi
 jqueryL original code
 jquery.min.js: minified code
 
-===========================================================================================================================
 
 ##OOP
 #Inheritance: child inherits parents' functions/variables without showing them (parent: base class. child: derived class)

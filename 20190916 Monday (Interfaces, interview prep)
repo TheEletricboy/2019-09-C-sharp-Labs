@@ -1,0 +1,60 @@
+## Monday
+
+#Interfaces
+
+Classes:
+		
+		Concrete ==> class(
+						FIELDS
+						PROPERTIES
+						METHODS
+					)
+
+								==> all are complete so we can instantiate with new keyword which will call the constructor method
+
+		Abstract method:
+					==> An unimplimented method or a method with no body
+					void MyMethod();
+
+		Interface:
+					A fully abstract class with absolutely no code body in methods
+
+							interface IDoThis{
+								(((abstract))) DoThis();
+
+							}
+
+							(((abstract is implied not stated)))
+
+		Parent Abstract class:
+
+			==> Child Concrete Classes		Only be a child of one parent
+
+			==> Child: also can not just inherit from one parent
+					 : it can also implement (use) many interfaces
+
+
+					 Parent abstract Person{} 						//abstract
+					 child user: Person{} 							//no longer abstract, now concrete
+					 childer user: Person, IUseThis, IUseThat {}	//Implement 2 interfaces
+
+					 Interface IUseThis{
+					 	void IDoThis;
+					 }
+					 Interface IUseThat{
+					 	void IDoThat;
+					 }
+
+					 							In User class we have to IMPLEMENT (BUILD) CODE FOR THESE interface methods
+					 							IDoThis and IDoThat. Mind picture is that each individual will use a tool 
+					 							in a slightly different way.
+
+					 Interfaces are usefull in large applications because 
+					 they create standardisation of how classes will have expected behaviour.
+					 		int.ToString();
+					 		char.ToString();
+
+					 		Child.DoThis();
+					 		Child.DoThat();
+
+# CSV
