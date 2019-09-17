@@ -1,0 +1,21 @@
+##ASync
+
+If we run an application then the code will run top-down, line by line.
+If an operation takes a long time then the program will hang and appear to do nothing.
+Today we want responsive apps which dont hang unless there is a critical fault.
+Examples mainly include online/offline apps which have the sensitivity to the network status.
+If the app goes offline, it can weither stop working or revert to an offline mode.
+
+C# 
+```c
+
+	Main()
+		DThisAsync();		//convention is use word 'ASync' at END OF METHOD
+		Console.ReadLine(); //ensure program stops and waits for async to complete. Otherwise application may terminate beforew async returns
+
+	async static void DoThisAsync(){
+		await.File.ReadAsync("thisfile.txt"); 	//marks the line where the async opeartion takes place
+	}
+```
+The Async keyword ensure that the Main mehtod does not wait for this method
+but the processing just calls the method then continues processing the nest line of the main method.

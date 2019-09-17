@@ -15,6 +15,7 @@ namespace lab_29_expoert_to_office
             string fileName = @"RabbitReport.docx";
             //string fileNameDocument = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\" + fileName;
             //save it to a directory
+            
             string fileNameDesktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\" + fileName;
 
             var doc = DocX.Create(fileName);
