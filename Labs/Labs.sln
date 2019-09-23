@@ -77,7 +77,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project_1000_wpf", "project
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_29_expoert_to_office", "lab_29_expoert_to_office\lab_29_expoert_to_office.csproj", "{7BF21ADD-0387-4BDE-BF8B-431B80C14EFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_30_async", "lab_30_async\lab_30_async.csproj", "{526EE297-C683-42A8-B15A-E25BD5337FDE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_30_async", "lab_30_async\lab_30_async.csproj", "{526EE297-C683-42A8-B15A-E25BD5337FDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_31_tasks", "lab_31_tasks\lab_31_tasks.csproj", "{B523E28B-D166-4DEC-A52B-83C353C83850}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -237,6 +239,10 @@ Global
 		{526EE297-C683-42A8-B15A-E25BD5337FDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{526EE297-C683-42A8-B15A-E25BD5337FDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{526EE297-C683-42A8-B15A-E25BD5337FDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B523E28B-D166-4DEC-A52B-83C353C83850}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B523E28B-D166-4DEC-A52B-83C353C83850}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B523E28B-D166-4DEC-A52B-83C353C83850}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B523E28B-D166-4DEC-A52B-83C353C83850}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

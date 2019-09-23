@@ -1,0 +1,30 @@
+## Games week
+
+#Have fun!
+
+# Be Creative!
+
+# Length of time: aim to finish by friday/Saturday
+
+# Depending on progress on progress may also give monday and tuesday or part of it for games, not sure yet. Will depend on class feel by Monday
+
+# Presentation: friday????
+
+# Communication: Go back to treating Sparta like you did on Day 1 ie super polite and dont assume anything.
+
+# User stories:
+		
+		Describe like this:
+
+			As a user when i click on my start button I see the - High Scores and Game screen open.
+
+			As a user when i move my cursor to box 1 it tests to see if ive landed on a mine.....
+
+			Functionality:
+				Trello: Put stories in Trello in a 'backlog list'
+				Sprint 1: Select a few of these as your goal to build.
+
+# Permanent storage:
+	for simple things just use a text file. Top score??? name????
+
+	Unity: SQLite which is basically the same as SQL with a little differnece 
