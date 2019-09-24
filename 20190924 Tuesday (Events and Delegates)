@@ -1,0 +1,54 @@
+## Events and Delegates
+Labs 32 and 33
+
+#Scripting ==> Linear programming ==> line 1 ... end
+
+#Graphics ==> Screen Objects eg: Button etc
+
+Event Driven programming
+```c
+			<Buton x:Name="Button01" Click="DoThis">
+
+			Main(string[] args){
+				private void Button01_Click(object sender, EventArgs e){
+
+					//sender: object initiating the event eg: BUTTON
+					//EventArgs
+				}
+			}
+```
+a) Trivial Example
+b) OOP Example
+
+===========================================================================================================================
+
+#A) TRIVIAL EVENT
+	1. The event can trigger one or more methods. Dont declare a method directly but via 'agent' type which will call named methods.
+
+			Delegate: pointer object which points to one or more methods
+			Declare Delegate: Create a a fixed structure for permitted method in/out parameters.
+
+				delegate void MyDelegate(); 	POINTER TO METHODS but ONLY methods matching 
+												this form can be part of a delegate object:
+
+												YES 	void DoThis();
+												YES 	void DoThat();
+												NO  	int AlsoDoThis(){return -1;}
+
+				SPECIFICATION/SIGNATURE of method is IN/OUT Parameter Mix
+	
+
+
+	2. Declare an Event but also specify the IN/OUT parameters for any methods which will be called
+
+		public event  MyDelegate   MyEvent;
+
+	3.Attach methods to our event (must match given IN/OUT structure)
+
+				MyEvent += Method01;		//Add
+				MyEvent += Method02;
+
+				..
+				MyEvent -+ Method01; 		//remove
+
+===========================================================================================================================
