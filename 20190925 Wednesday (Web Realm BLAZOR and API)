@@ -1,0 +1,119 @@
+## Web!
+
+Web realm is incredibly exciting
+
+	Checkout BLAZOR which is c# natively running in the beowser.
+
+	Today we are going to check out APIs which power much ofthe web.
+
+
+
+#	Website 	HUMAN CONSUPTION: 		HTML structure, CSS color and animations, Javascript Code
+
+#	API 		MACHINE CONSUPTION 		DATA in form:
+	(Application 								1)Json
+	Programming Interface) 						2)XML
+
+# 	Json
+{
+	"field": value,
+	"field": value
+}
+
+[ (this just means its an array)
+	{
+ 	"field": value,
+	"field": value
+	},
+	{
+ 	"field": value,
+	"field": value
+	}
+]
+
+# XML
+
+	<rootElement>													<> Tag or Element (ONE ROOTH ONLY)
+		<item length="1">											Element with an Attribute("length") and Value ("1")
+			<field otherValue="admin">Value</field>
+		</item>
+
+	</rootElement>
+
+
+
+
+
+===========================================================================================================================
+
+#GOAL
+
+1)Use Northwind
+2)Entity Framework
+3)Scaffold API from scratch with minimal work
+
+===========================================================================================================================
+
+
+#MVC Methodology
+
+	Model 		Database Item ==> C# 	Class matches the database table
+										Northwind customers ==> Class Customer
+
+	View 								Display of data to the end user: HTML/CSS/JAVASCRIPT + server-side data fed into page
+																		 (translated into HTML/CSS/Javascript)
+
+
+										Server 						Client
+										C#/Node/PHP/Java/Python/Ruby
+											Render
+												Translate raw data into
+												form suitable for viewing
+												ir HTML etc ======================> Sent to client for display=====>
+
+	Controller 							look at the URL to make sense of it
+
+										 https://www.mydomain.com/controller/action/id 	
+										 						 /customers/Get/ 	 	Select *
+										 						 /customers/Get/ALFKI 	Select...where id=ALFKI
+										 						 /customers/Post/ 		new customer
+										 						 /customers/Post/id 	updating new customer data
+										 						 			(PUT) ==> can also be PUT instead of POST
+
+										Get: request VISIBLE IN URL
+										POST: request is INSIDE WEB PAGE DATA
+
+								Controller:
+									a)Analyse URL
+									b)According to instructions in URL, go and get relevant data from model
+									c)Send that data to a VIEW PAGE which will then display the data
+
+#MVC Summary
+
+Model: DATA
+Controller: Take request and return Data to VIEW
+View: DISPLAY
+
+#API Using .NET Core
+
+Microsoft is strongly pushing .NET Core so let's use this opportunity to explore 
+what it means to use .NET Core to read a data base.
+
+Goals:
+1) 'Code First' approach to build our code, and from this create a database
+				a)SQLServer
+				b)SQLite 		==trying this way
+
+2) Seed data from C# ie create new database with new data
+
+3)Create API
+
+##SETUP
+.NET CORE 2.1 Web App with API
+
+	Install libraries EntityFrameworkCore/SQLite/Design 	v2.1.1
+
+	a) install package ... 	NUGET
+	b) dotnet add package ... 	Powershell
+
+	dotnet add package microsoft.entityframeworkcore.design -v 2.1.1
