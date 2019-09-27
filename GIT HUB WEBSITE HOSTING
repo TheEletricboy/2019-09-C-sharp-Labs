@@ -1,0 +1,13 @@
+##Push your website to the internet for FREE
+
+AUTOMATIC DEPLOYMENT ON CHANGE (IE GIT PUSH)
+		
+		Build Local
+
+			Push to GITHUB
+				Deploy to Netlify
+		Change Local
+			Push to GITHUB
+				Automatic Redeployment
+
+#Create account on Netlify.com
