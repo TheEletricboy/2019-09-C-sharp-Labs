@@ -1,0 +1,64 @@
+#Web Layout
+
+#HTML Layout
+
+	Traditional websites used HTML for layout
+
+	<div class="navbar"><!--menu --></div>
+	<div class="main"><!--main content --></div>
+	<div class="footer"></div>
+
+#HTML 5 Layout:
+	
+	Semantic tag: same as DIV (division of a page) but 
+	just has meaning related to placing and content on page
+
+		HEADER
+		NAV 		(navigation bar ie: menu items)
+		SECTION
+				ARTICLE
+				ASIDE
+		FOOTER
+
+Assistive technologies oten pay attention to these tags:
+	
+	eg: screen readers
+	eg: <img alt="" title="" />
+			 alt displayed on hover and also read out by screen reader
+
+
+#CSS:
+ 	
+ 	<button class="buttonTypeROund" />
+
+ 	<style>
+ 	.buttonTypeRound{
+ 		border-radius:5px;
+ 	}
+
+
+#Flexbox:
+	
+	Useful for 1D arrangement of items, eg: Nav bar or a Picture Gallery (easy to center etc etc)
+
+#Grid
+
+	Set a varying column widths to fixed/auto/match content etc
+	Good for laying out responsive layout and placing elements with minimum 
+	of fuss. Good for centering items easily within page or grid box.
+
+##HOMEWORK
+
+	a) Rebuild a couple of FLEXBOXES note : can set both horizontal and vertical.
+        Check my philanderson888/showcase/index.html for examples.
+
+ 
+
+    b) Grid
+        Check out philanderson888/2019-09-html-introduction repo
+            Grid example.
+
+ 
+
+        Build a webpage using GRID to lay out structure
+        Put in 3 features which can be interacted with using JAVASCRIPT.
