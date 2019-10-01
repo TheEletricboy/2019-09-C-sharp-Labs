@@ -105,6 +105,15 @@ Aims to ensure INTEGRITY of data within a database ie all of the relationships m
 	select distinct country from customers order by country
 ```
 
+#as select...as.....
+
+	SELECT (calculation) as 'columnname'
+
+	AS IS OPTIONAL
+
+	SELECT (calculation) 'columnname'
+
+
 #Contains ==> SQL 'like' keyword
 ```sql
 	#contains 'abc'
@@ -192,3 +201,38 @@ Order matters!
 		SELECT DISTINCT FROM WHERE .....
 		Group BY ...HAVING....
 		ORDER BY...
+
+#JOINS
+
+INNER JOIN = LEFT JOIN
+
+	table1 			table2
+		tableid 		table2id
+
+	All from table1 plus matching from table2 only where there is a match
+
+FULL JOIN
+
+	All from table1 plus all from table2 and NULL if no matching record in table2
+
+#Subqueries
+
+Query within a query: useful for large, long queries
+
+```sql
+
+select ...from ...where (select...from...)
+//find customers with no orders
+Ex: select * from customers where customerId not in (select customerId from orders)
+
+```
+#EXTRA TERMS
+
+IDENTITY(1,1) 			Autoincrement starting at value 1 and jump by 1 each time
+IDENTITY 				Autoincrement 
+PRIMARY KEY CLUSTERED	Only one primary key
+
+
+#Connection Strings and Environemnt Variables
+
+We can build a connection string

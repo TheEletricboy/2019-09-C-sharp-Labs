@@ -66,3 +66,12 @@ from oranges inner join categories on oranges.CategoryId = Categories.CategoryId
 --AS 'IsExpired'
 --from batch
 --inner join oranges on oranges.OrangeId=batch.OrangeID
+
+
+Update Categories set CategoryName='red' where CategoryId=2
+select * from Categories
+
+insert into Oranges values ('Dummy', '2019-09-07', 0, 2)
+Select * from Oranges
+delete from oranges where OrangeId=5
+select * from Oranges 

@@ -58,3 +58,17 @@ select sum(quantity*unitprice) as 'grosssales',
 sum(quantity*unitprice*(1-discount)) as 'DiscountedSales',
 (sum(quantity*unitprice) - sum(quantity*unitprice*(1-discount))) as 'discount given'
 from [Order Details]
+
+select 'GROUP BY' 
+select supplierid, sum(unitsonorder) as 'Total Units on Order'from products group by SupplierID
+having sum(UnitsOnOrder) = 0
+order by 'Total Units on Order' desc
+
+select 'GROUP BY' 
+select supplierid, sum(unitsonorder) as 'Total Units on Order'from products group by SupplierID
+having sum(UnitsOnOrder) > 0
+order by 'Total Units on Order' desc
+
+--Subqueries
+select * from customers where customerid not in
+(select customerid from orders)
