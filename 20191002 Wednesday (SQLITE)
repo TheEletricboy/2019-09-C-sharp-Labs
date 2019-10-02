@@ -1,0 +1,52 @@
+##20191002 Wednesday SQLITE
+
+#SQL Server is HUGE
+
+Install is very complex
+
+Also mobile phones cant talk so easily to a local SQL database. Its more for
+BIG Industry/Finance.
+
+SQLite holds data locally on any small device. Compatible with Unity, IOS, Android etc.
+
+#Commands
+DOWNLOAD: https://sqlite.org/2019/sqlite-tools-win32-x86-3290000.zip and extract into SQlite folder
+
+
+in powershell: 
+```powershell
+/.sqlite3 				check working OK
+/.sqlite3 TestDatabase
+
+IN SQLITE ENVIRONMENT:
+
+.database
+.open TestDatabase 		//bring you into scope
+.tables 				//list all
+select * from Customers
+```
+#Table
+```sql
+create table testTable(id int, name varchar(10));
+insert into testTable values (1, 'bob');
+select * from testTable;
+```
+
+#Auto Increment Id ((compare IDENTITY in SQL))
+```sql
+create table Students(StudentId integer primary key, Name Varchar(50));
+
+insert into Students (Name) values ('Mr Sparta');
+select * from Students;
+```
+
+#Generate Northwind
+
+.quit 		//to exit environment
+
+
+go online and download: https://raw.githubusercontent.com/markjprice/cs7dotnetcore2/master/sql-scripts/Northwind4SQLite.sql
+```powershell
+./sqlite3 Northwind.db < Northwind.sql 		//have to get this file from the internet
+```
+
