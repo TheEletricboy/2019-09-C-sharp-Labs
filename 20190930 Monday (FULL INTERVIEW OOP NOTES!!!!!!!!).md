@@ -108,7 +108,7 @@ Inheritance: a derived class inherits the base class's variables and methods but
 Encapsulation: encapsulating a variable inside a class
 Abstraction: using public properties to interact with encapsulated members
 Polymorphism: base class values can be overwritten in derived class
-Virtual: a parent class that is inherited by an abstract class
+Virtual: tagging a method to be overwritten ina aderived class
 override: re-using objects in other objects
 abstract/override: inherit from base class
 Interface: a fully abstract class with absolutely no code body in the methods
