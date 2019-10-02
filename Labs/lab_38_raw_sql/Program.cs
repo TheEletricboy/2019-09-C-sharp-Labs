@@ -9,7 +9,7 @@ namespace lab_38_raw_sql
 {
     class Program
     {
-        static string connectionstring = @"Data Source = localhost;Initial Catalog=Northwind;Persist Security Info=True;User ID=SA;Password=Passw0rd2018";
+        static string connectionstring = null;
         static string connectionstring2 = @"Data Source = (localdb)\mssqllocaldb;Initial Catalog=Northwind;";
 
 
@@ -17,11 +17,10 @@ namespace lab_38_raw_sql
         static List<Customer> customers = new List<Customer>();
         static void Main(string[] args)
         {
-            //using (var connection = new SqlConnection(connectionstring))
-            //{
-            //    connection.Open();
-            //    Console.WriteLine(connection.State);
-            //}
+            //Environment.SetEnvironmentVariable("SecretPassword", "Passw0rd");
+            var secret = Environment.GetEnvironmentVariable("SecretPassword");
+            connectionstring = $"Data Source = localhost;Initial Catalog=Northwind;Persist Security Info=True;User ID=SA;Password={secret}";
+
             GenerateRandomId();
             //InsertCustomer();
             UpdateCustomer();

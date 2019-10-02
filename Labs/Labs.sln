@@ -95,6 +95,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_37_overflow", "lab_37_o
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_38_raw_sql", "lab_38_raw_sql\lab_38_raw_sql.csproj", "{326ADAD1-9B7E-4967-ACD0-CA865B0A7585}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_39_environmental_variables", "lab_39_environmental_variables\lab_39_environmental_variables.csproj", "{CF38B220-9E43-4EFC-BB80-8C7A984EE2E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -285,6 +287,10 @@ Global
 		{326ADAD1-9B7E-4967-ACD0-CA865B0A7585}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{326ADAD1-9B7E-4967-ACD0-CA865B0A7585}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{326ADAD1-9B7E-4967-ACD0-CA865B0A7585}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF38B220-9E43-4EFC-BB80-8C7A984EE2E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF38B220-9E43-4EFC-BB80-8C7A984EE2E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF38B220-9E43-4EFC-BB80-8C7A984EE2E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF38B220-9E43-4EFC-BB80-8C7A984EE2E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
