@@ -1,4 +1,8 @@
-﻿--1.1
+﻿select ShipRegion from Orders
+
+
+
+--1.1
 select CustomerId, CompanyName, 
 Address, City, Region, PostalCode 
 from Customers
@@ -18,7 +22,12 @@ where QuantityPerUnit Like '%bottle%'
 --that shows how many products there are 
 --in each category. Include Category Name in result 
 --set and list the highest number first.
-select CategoryName, count(distinct()) from Products
+select Categories.CategoryName as CategoryName, count(Products.CategoryID) as 'Number of products in Categories' from Products
+inner join Categories on Products.CategoryID = Categories.CategoryID
+GROUP by Categories.CategoryName
+order by 'Number of products in Categories' desc;
+
+
 
 
 --1.5 List all UK employees using concatenation 
@@ -31,6 +40,14 @@ from Employees where Country='UK'
 
 
 --1.6
+SELECT RegionDescription, ROUND((SUM((Quantity*UnitPrice)*1-Discount)), 2) as 'Sales Total By Region'
+FROM Region
+INNER JOIN Territories on Territories.RegionID = Region.RegionID
+INNER JOIN EmployeeTerritories on Territories.TerritoryID = EmployeeTerritories.TerritoryID
+INNER JOIN Orders on EmployeeTerritories.EmployeeID = Orders.EmployeeID
+INNER JOIN [Order Details] on [Order Details].OrderID = Orders.OrderID
+GROUP BY RegionDescription
+HAVING (SUM((Quantity*UnitPrice)*1-Discount) > 1000000);
 
 --1.7
 --Count how many Orders have a Freight amount greater
