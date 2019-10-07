@@ -15,6 +15,7 @@
   <ItemGroup>
     <ProjectReference Include="..\lab_012_test_me_out\lab_012_test_me_out.csproj" />
     <ProjectReference Include="..\lab_12_rabbit_explosion\lab_012_rabbit_explosion.csproj" />
+    <ProjectReference Include="..\lab_just_do_it_17_enum_with_tests\lab_just_do_it_17_enum_with_tests.csproj" />
   </ItemGroup>
 
 </Project>

@@ -19,8 +19,6 @@
 	BurnDown: List of tasks to be done
 
 #Agile values:
-	
-	values
 	working code over documentation
 	people over processes
 	collaboration over negotiation
@@ -100,6 +98,8 @@
 
 #OOP
 
+OOP 4 Pillars: inheritance, encapsulation, polymorphism, abstraction
+
 Class: the blueprint or object
 Sealed: part of code that can be inherited by derived classes
 Abstract Class:	class with one or more abstract methods
@@ -108,7 +108,7 @@ Inheritance: a derived class inherits the base class's variables and methods but
 Encapsulation: encapsulating a variable inside a class
 Abstraction: using public properties to interact with encapsulated members
 Polymorphism: base class values can be overwritten in derived class
-Virtual: tagging a method to be overwritten ina aderived class
+Virtual: tagging a method to be overwritten in a derived class
 override: re-using objects in other objects
 abstract/override: inherit from base class
 Interface: a fully abstract class with absolutely no code body in the methods
