@@ -80,9 +80,12 @@ create table SpartansTable(
 )
 
 insert into SpartansTable values('Mr','Miguel', 'Vieira', 'Bedfordshire', 'Games Course', 'First')
-insert into SpartansTable values('Ms','Ruoyi', 'Jiang', 'No clue', 'Games Course', 'First')
+insert into SpartansTable values('Ms','Ruoyi', 'Jiang', 'NA', 'Games Course', 'First')
 insert into SpartansTable values('Mr','Myles', 'Muda', 'London something', 'Computer Sc Course', 'Second')
-insert into SpartansTable values('Mr','Alykhan', 'Esmail', 'No clue', 'Games Course', 'First')
+insert into SpartansTable values('Mr','Samuel', 'Ribeiro', 'London', 'Computer Sc Course', 'NA')
+insert into SpartansTable values('Mr','Ryan', 'Burdus', 'NA', 'NA', 'First')
+insert into SpartansTable values('Mr','Mohsin', 'NA', 'NA', 'NA', 'NA')
+
 
 select * from SpartansTable
 --end 2.0
