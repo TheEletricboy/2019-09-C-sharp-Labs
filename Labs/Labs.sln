@@ -117,19 +117,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_just_do_it_17_enum_with
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_44_assemblies", "lab_44_assemblies\lab_44_assemblies.csproj", "{9C115605-7A90-4FA6-95F5-BEC19180AF4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_45_streaming", "lab_45_streaming\lab_45_streaming.csproj", "{FD6A5193-8865-48AD-B669-DD0DDD2355FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_45_streaming", "lab_45_streaming\lab_45_streaming.csproj", "{FD6A5193-8865-48AD-B669-DD0DDD2355FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_just_do_it_MEGA_APP", "lab_just_do_it_MEGA_APP\lab_just_do_it_MEGA_APP.csproj", "{9A1AF70B-CF6D-4FAE-90F2-7E1E086A9E33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_just_do_it_MEGA_APP", "lab_just_do_it_MEGA_APP\lab_just_do_it_MEGA_APP.csproj", "{9A1AF70B-CF6D-4FAE-90F2-7E1E086A9E33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_just_do_it_MEGA_APP_old", "lab_just_do_it_MEGA_APP_old\lab_just_do_it_MEGA_APP_old.csproj", "{45DB2DDA-6F5F-4CF2-85FA-12604311E7B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_just_do_it_MEGA_APP_old", "lab_just_do_it_MEGA_APP_old\lab_just_do_it_MEGA_APP_old.csproj", "{45DB2DDA-6F5F-4CF2-85FA-12604311E7B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_46_API", "lab_46_API\lab_46_API.csproj", "{D6591887-99C5-471B-BE08-C177255C4334}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_46_API", "lab_46_API\lab_46_API.csproj", "{D6591887-99C5-471B-BE08-C177255C4334}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_facial_recognition_wpf", "lab_facial_recognition_wpf\lab_facial_recognition_wpf.csproj", "{FE626AD9-16C7-44DA-A071-5EDCE9F6FD96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_46_read_api", "lab_46_read_api\lab_46_read_api.csproj", "{80F1B637-D963-44C8-8565-4F8655FC1A50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_46_read_api", "lab_46_read_api\lab_46_read_api.csproj", "{80F1B637-D963-44C8-8565-4F8655FC1A50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_46_mvc_consume_api", "lab_46_mvc_consume_api\lab_46_mvc_consume_api.csproj", "{E4567FEE-B039-44E6-A187-A376F5D52159}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_46_mvc_consume_api", "lab_46_mvc_consume_api\lab_46_mvc_consume_api.csproj", "{E4567FEE-B039-44E6-A187-A376F5D52159}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_facial_recognition_forms", "lab_facial_recognition_forms\lab_facial_recognition_forms.csproj", "{EFA34F73-E402-401B-92D3-8DC574A38DE9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -913,6 +915,18 @@ Global
 		{E4567FEE-B039-44E6-A187-A376F5D52159}.Release|iPhone.Build.0 = Release|Any CPU
 		{E4567FEE-B039-44E6-A187-A376F5D52159}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{E4567FEE-B039-44E6-A187-A376F5D52159}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Release|iPhone.Build.0 = Release|Any CPU
+		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

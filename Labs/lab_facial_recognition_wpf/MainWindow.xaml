@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:lab_facial_recognition_wpf"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Image x:Name="cameraBox" HorizontalAlignment="Left" Height="249" Margin="50,100,0,0" VerticalAlignment="Top" Width="249"/>
-    </Grid>
+
+    <emgu:ImageBox x:Name="imgBox"></emgu:ImageBox>
+    <Grid/>
 </Window>
