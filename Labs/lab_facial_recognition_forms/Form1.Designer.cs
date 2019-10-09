@@ -41,7 +41,7 @@
             // 
             this.cameraBox.Location = new System.Drawing.Point(13, 13);
             this.cameraBox.Name = "cameraBox";
-            this.cameraBox.Size = new System.Drawing.Size(368, 282);
+            this.cameraBox.Size = new System.Drawing.Size(402, 282);
             this.cameraBox.TabIndex = 2;
             this.cameraBox.TabStop = false;
             this.cameraBox.Click += new System.EventHandler(this.cameraBox_Click);
