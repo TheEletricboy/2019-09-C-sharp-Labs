@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FE626AD9-16C7-44DA-A071-5EDCE9F6FD96}</ProjectGuid>
+    <ProjectGuid>{EA573EB1-91E0-4099-9352-56BB990983E2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>lab_facial_recognition_wpf</RootNamespace>
     <AssemblyName>lab_facial_recognition_wpf</AssemblyName>
@@ -57,6 +57,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -69,6 +71,7 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">

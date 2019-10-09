@@ -61,6 +61,10 @@ namespace lab_facial_recognition_forms
             }
         }
 
+
+
+
+
         private void saveButton_Click(object sender, EventArgs e)
         {
             Count = Count + 1;
@@ -84,6 +88,12 @@ namespace lab_facial_recognition_forms
             MessageBox.Show(textName + "Added Successfully!");
         }
 
+
+
+
+
+
+
         private void cameraBox_Click(object sender, EventArgs e)
         {
             
@@ -95,6 +105,12 @@ namespace lab_facial_recognition_forms
             camera.QueryFrame();
             Application.Idle += new EventHandler(FrameProcedure);
         }
+
+
+
+
+
+
 
         private void FrameProcedure(object sender, EventArgs e)
         {

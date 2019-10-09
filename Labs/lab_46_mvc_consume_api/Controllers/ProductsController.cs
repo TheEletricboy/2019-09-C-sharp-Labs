@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using lab_46_mvc_consume_api.Models;
 using System.Net.Http;
 using Newtonsoft;
+using Newtonsoft.Json;
 
 namespace lab_46_mvc_consume_api.Controllers
 {
