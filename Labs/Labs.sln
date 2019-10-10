@@ -137,6 +137,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_just_do_it_http_web_req
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_facial_recognition_wpf", "lab_facial_recognition_wpf\lab_facial_recognition_wpf.csproj", "{EA573EB1-91E0-4099-9352-56BB990983E2}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_50_api_todo_list_core", "lab_50_api_todo_list_core\lab_50_api_todo_list_core.csproj", "{BD760504-FCC2-4603-8F23-255B1CC43001}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -955,6 +957,18 @@ Global
 		{EA573EB1-91E0-4099-9352-56BB990983E2}.Release|iPhone.Build.0 = Release|Any CPU
 		{EA573EB1-91E0-4099-9352-56BB990983E2}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{EA573EB1-91E0-4099-9352-56BB990983E2}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{BD760504-FCC2-4603-8F23-255B1CC43001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD760504-FCC2-4603-8F23-255B1CC43001}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD760504-FCC2-4603-8F23-255B1CC43001}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{BD760504-FCC2-4603-8F23-255B1CC43001}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{BD760504-FCC2-4603-8F23-255B1CC43001}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{BD760504-FCC2-4603-8F23-255B1CC43001}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{BD760504-FCC2-4603-8F23-255B1CC43001}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD760504-FCC2-4603-8F23-255B1CC43001}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD760504-FCC2-4603-8F23-255B1CC43001}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{BD760504-FCC2-4603-8F23-255B1CC43001}.Release|iPhone.Build.0 = Release|Any CPU
+		{BD760504-FCC2-4603-8F23-255B1CC43001}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{BD760504-FCC2-4603-8F23-255B1CC43001}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -82,17 +82,16 @@ namespace lab_facial_recognition_forms
             for (int i = 1; i < trainingImages.ToArray().Length +1; i++)
             {
                 trainingImages.ToArray()[i - 1].Save(Application.StartupPath + "/Faces/face" + i + ".bmp");
-                File.AppendAllText(Application.StartupPath + "/Faces/Faces.txt", labels.ToArray() [i-1] + ",");
+                File.AppendAllText(Application.StartupPath + "/Faces/Faces.txt", labels.ToArray() [i-1] + ", ");
 
             }
-            MessageBox.Show(textName + "Added Successfully!");
+            MessageBox.Show(textName.Text + ": " + "Added Successfully!");
         }
 
-
-
-
-
-
+        private void userButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show($"This many users exist: {labels.Count}. \n\n This is the first label in the Array: {labels[0]}");
+        }
 
         private void cameraBox_Click(object sender, EventArgs e)
         {
