@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using Emgu.CV;
 using Emgu.CV.Structure;
 using System.IO;
+using System.Windows.Media.Imaging;
+using System.Windows;
 
 namespace lab_facial_recognition_forms
 {
@@ -69,7 +71,7 @@ namespace lab_facial_recognition_forms
         {
             Count = Count + 1;
             grayFace = camera.QueryGrayFrame().Resize(320, 240, Emgu.CV.CvEnum.INTER.CV_INTER_CUBIC);
-            MCvAvgComp[][] DetectedFaces = grayFace.DetectHaarCascade(faceDetected, 1.2, 10, Emgu.CV.CvEnum.HAAR_DETECTION_TYPE.DO_CANNY_PRUNING, new Size(20, 20));
+            MCvAvgComp[][] DetectedFaces = grayFace.DetectHaarCascade(faceDetected, 1.2, 10, Emgu.CV.CvEnum.HAAR_DETECTION_TYPE.DO_CANNY_PRUNING, new System.Drawing.Size(20, 20));
             foreach (MCvAvgComp f in DetectedFaces[0])
             {
                 TrainedFace = Frame.Copy(f.rect).Convert<Gray, byte>();
@@ -117,7 +119,7 @@ namespace lab_facial_recognition_forms
             Users.Add("");
             Frame = camera.QueryFrame().Resize(320, 240, Emgu.CV.CvEnum.INTER.CV_INTER_CUBIC);
             grayFace = Frame.Convert<Gray, Byte>();
-            MCvAvgComp[][] facesDetectedNow = grayFace.DetectHaarCascade(faceDetected, 1.2, 10, Emgu.CV.CvEnum.HAAR_DETECTION_TYPE.DO_CANNY_PRUNING, new Size(20, 20));
+            MCvAvgComp[][] facesDetectedNow = grayFace.DetectHaarCascade(faceDetected, 1.2, 10, Emgu.CV.CvEnum.HAAR_DETECTION_TYPE.DO_CANNY_PRUNING, new System.Drawing.Size(20, 20));
             foreach (MCvAvgComp f in facesDetectedNow[0])
             {
                 result = Frame.Copy(f.rect).Convert<Gray, Byte>().Resize(100,100, Emgu.CV.CvEnum.INTER.CV_INTER_CUBIC);
@@ -127,7 +129,7 @@ namespace lab_facial_recognition_forms
                     MCvTermCriteria termCriterias = new MCvTermCriteria(Count, 0.001);
                     EigenObjectRecognizer recognizer = new EigenObjectRecognizer(trainingImages.ToArray(), labels.ToArray(), 1500, ref termCriterias);
                     name = recognizer.Recognize(result);
-                    Frame.Draw(name, ref font, new Point(f.rect.X -2, f.rect.Y -2), new Bgr(Color.Red));
+                    Frame.Draw(name, ref font, new System.Drawing.Point(f.rect.X -2, f.rect.Y -2), new Bgr(Color.Red));
 
                 }
                 //Users[t - 1] = name;

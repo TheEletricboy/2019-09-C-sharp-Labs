@@ -35,7 +35,10 @@ namespace lab_facial_recognition_wpf
 
         MCvFont font = new MCvFont(Emgu.CV.CvEnum.FONT.CV_FONT_HERSHEY_TRIPLEX, 0.6d, 0.6d);
         HaarCascade faceDetected;
+
         Image<Bgr, byte> Frame;
+        
+
         Capture camera;
         Image<Gray, byte> result;
         Image<Gray, byte> TrainedFace = null;
@@ -59,8 +62,14 @@ namespace lab_facial_recognition_wpf
         {
             InitializeComponent();
 
+            //=================================
+            camera = new Capture();
+            camera.QueryFrame();
+            Application.Idle += new EventHandler(FrameProcedure);
 
-            
+
+            //==============================
+
             //haarcascade is for face detection
             faceDetected = new HaarCascade("haarcascade_frontalface_default.xml");
             try
@@ -112,11 +121,31 @@ namespace lab_facial_recognition_wpf
                 Users.Add("");
             }
 
-            cameraBox.Image = Frame;
+            image1.Source = ToBitmapSource(Frame);
             names = "";
             Users.Clear();
 
 
+        }
+
+        private static extern int DeleteObject(IntPtr o);
+
+        public static BitmapSource ToBitmapSource(IImage image)
+        {
+            using (System.Drawing.Bitmap source = image.Bitmap)
+            {
+                IntPtr ptr = source.GetHbitmap(); //obtain the Hbitmap
+
+                BitmapSource bs = System.Windows.Interop
+                  .Imaging.CreateBitmapSourceFromHBitmap(
+                  ptr,
+                  IntPtr.Zero,
+                  Int32Rect.Empty,
+                  System.Windows.Media.Imaging.BitmapSizeOptions.FromEmptyOptions());
+
+                DeleteObject(ptr); //release the HBitmap
+                return bs;
+            }
         }
     }
 }
