@@ -8,14 +8,19 @@
         mc:Ignorable="d"
         xmlns:WinFormHost="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration" 
         Title="MainWindow" Height="450" Width="800" Background="Black">
-    <Grid>
+    <Grid Margin="-9,0,0,0">
 
-        <WindowsFormsHost x:Name="cam_winform" Margin="1,0,0,0" HorizontalAlignment="Left" Width="322">
-            <WinFormControls:ImageBox x:Name="cameraBox" FunctionalMode="Minimum"/>
+        
 
-        </WindowsFormsHost>
-        <Button x:Name="start" Content="start" HorizontalAlignment="Left" Margin="341,59,0,0" VerticalAlignment="Top" Width="299" Height="122" Click="start_Click_1"/>
+            <Image Name="image1" Stretch="Fill" Margin="22,10,526,162" />
+            <Button x:Name="start" Content="start" HorizontalAlignment="Left" Margin="341,59,0,0" VerticalAlignment="Top" Width="299" Height="122" Click="start_Click_1"/>
+
 
 
     </Grid>
 </Window>
+
+<!--<WindowsFormsHost x:Name="cam_winform" HorizontalAlignment="Left" Width="322" Margin="10,0,0,0">
+    <WinFormControls:ImageBox x:Name="cameraBox" FunctionalMode="Minimum"/>
+
+</WindowsFormsHost>-->
