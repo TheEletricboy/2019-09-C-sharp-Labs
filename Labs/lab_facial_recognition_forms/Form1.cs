@@ -31,20 +31,27 @@ namespace lab_facial_recognition_forms
         int Count, NumLables, t;
         string name, names = null;
 
-        private void imageBox1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         public Form1()
         {
             InitializeComponent();
+            this.Text = "T.U.R.D.S. (Tiny User Recognition and Designator System)";
+            this.Size = new System.Drawing.Size(800, 500);
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+
+
+
+
+
+
+
             //haarcascade is for face detection
             faceDetected = new HaarCascade("haarcascade_frontalface_default.xml");
             try
             {
+                //labelsinf reads text from herever the file startsup + the folder Faces and the file txt
                 string Labelsinf = File.ReadAllText(Application.StartupPath + "/Faces/Faces.txt");
-                string[] Labels = Labelsinf.Split(',');
+                string[] Labels = Labelsinf.Split(','); //splits each object in Labels array with ','
                 //the first label before ',' will be the number of faces saved.
                 NumLables = Convert.ToInt16(Labels[0]);
                 Count = NumLables;
@@ -65,6 +72,11 @@ namespace lab_facial_recognition_forms
 
 
 
+
+
+
+
+        //BUTONS==============================================================
 
 
         private void saveButton_Click(object sender, EventArgs e)
@@ -92,13 +104,23 @@ namespace lab_facial_recognition_forms
 
         private void userButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"This many users exist: {labels.Count}. \n\n This is the first label in the Array: {labels[0]}");
+            MessageBox.Show($"This many users exist: {labels.Count}. \n\n This is the first label in the Array: {labels[2]}");
         }
 
         private void cameraBox_Click(object sender, EventArgs e)
         {
             
-        }   
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void imageBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
 
         private void start_Click(object sender, EventArgs e)
         {
@@ -110,8 +132,8 @@ namespace lab_facial_recognition_forms
 
 
 
-
-
+        //=========================================================================================
+        //EXTRA METHODS=============================================================================
 
         private void FrameProcedure(object sender, EventArgs e)
         {

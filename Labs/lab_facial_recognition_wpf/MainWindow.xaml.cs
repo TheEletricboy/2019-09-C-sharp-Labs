@@ -12,6 +12,12 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Forms;
+using Emgu.CV;
+using Emgu.CV.Structure;
+using System.IO;
+using System.Windows.Media.Imaging;
+using System.Windows;
 using lab_facial_recognition_forms;
 
 
@@ -22,6 +28,8 @@ namespace lab_facial_recognition_wpf
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        lab_facial_recognition_forms.Form1 newForm;
         public MainWindow()
         {
             InitializeComponent();
@@ -29,10 +37,14 @@ namespace lab_facial_recognition_wpf
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            Hide();
-            Form1 form = new Form1();
-            form.ShowDialog();
-            Close();
+            //Hide();
+            //Form1 form = new Form1();
+            //form.ShowDialog();
+            //Close();
+
+            newForm = new lab_facial_recognition_forms.Form1();
+            newForm.Show();
+
         }
     }
 }

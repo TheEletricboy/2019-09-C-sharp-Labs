@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.cameraBox = new Emgu.CV.UI.ImageBox();
             this.start = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
@@ -36,25 +37,27 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.userButton = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.cameraBox)).BeginInit();
             this.SuspendLayout();
             // 
             // cameraBox
             // 
-            this.cameraBox.Location = new System.Drawing.Point(149, 122);
-            this.cameraBox.Margin = new System.Windows.Forms.Padding(4);
+            this.cameraBox.Location = new System.Drawing.Point(83, 107);
             this.cameraBox.Name = "cameraBox";
-            this.cameraBox.Size = new System.Drawing.Size(536, 347);
+            this.cameraBox.Size = new System.Drawing.Size(334, 226);
             this.cameraBox.TabIndex = 2;
             this.cameraBox.TabStop = false;
             this.cameraBox.Click += new System.EventHandler(this.cameraBox_Click);
             // 
             // start
             // 
-            this.start.Location = new System.Drawing.Point(748, 122);
-            this.start.Margin = new System.Windows.Forms.Padding(4);
+            this.start.Location = new System.Drawing.Point(554, 82);
             this.start.Name = "start";
-            this.start.Size = new System.Drawing.Size(145, 113);
+            this.start.Size = new System.Drawing.Size(109, 92);
             this.start.TabIndex = 3;
             this.start.Text = "Start Detection and Recognition";
             this.start.UseVisualStyleBackColor = true;
@@ -62,10 +65,9 @@
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(748, 421);
-            this.saveButton.Margin = new System.Windows.Forms.Padding(4);
+            this.saveButton.Location = new System.Drawing.Point(554, 327);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(145, 36);
+            this.saveButton.Size = new System.Drawing.Size(109, 29);
             this.saveButton.TabIndex = 4;
             this.saveButton.Text = "Save Face";
             this.saveButton.UseVisualStyleBackColor = true;
@@ -73,19 +75,19 @@
             // 
             // textName
             // 
-            this.textName.Location = new System.Drawing.Point(748, 389);
-            this.textName.Margin = new System.Windows.Forms.Padding(4);
+            this.textName.Location = new System.Drawing.Point(554, 288);
             this.textName.Name = "textName";
-            this.textName.Size = new System.Drawing.Size(144, 22);
+            this.textName.Size = new System.Drawing.Size(109, 20);
             this.textName.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(693, 393);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Chocolate;
+            this.label1.Location = new System.Drawing.Point(551, 272);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 17);
+            this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "Name:";
             // 
@@ -93,29 +95,83 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(751, 356);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(551, 175);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 17);
+            this.label2.Size = new System.Drawing.Size(107, 13);
             this.label2.TabIndex = 7;
             this.label2.Text = "Save A new Face";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // userButton
             // 
-            this.userButton.Location = new System.Drawing.Point(748, 13);
+            this.userButton.Location = new System.Drawing.Point(31, 394);
+            this.userButton.Margin = new System.Windows.Forms.Padding(2);
             this.userButton.Name = "userButton";
-            this.userButton.Size = new System.Drawing.Size(144, 57);
+            this.userButton.Size = new System.Drawing.Size(108, 46);
             this.userButton.TabIndex = 8;
             this.userButton.Text = "userButton";
             this.userButton.UseVisualStyleBackColor = true;
             this.userButton.Click += new System.EventHandler(this.userButton_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Black;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Chocolate;
+            this.label3.Location = new System.Drawing.Point(24, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(191, 39);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "T.U.R.D.S.";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Roboto", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Chocolate;
+            this.label4.Location = new System.Drawing.Point(526, 239);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(166, 22);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "CREATE NEW USER";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Black;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Chocolate;
+            this.label5.Location = new System.Drawing.Point(507, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(225, 39);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "CONTROLS.";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Black;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Chocolate;
+            this.label6.Location = new System.Drawing.Point(209, 30);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(270, 13);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "(Tiny User Recognition and Designator System)";
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.userButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -123,9 +179,11 @@
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.start);
             this.Controls.Add(this.cameraBox);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "0";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cameraBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -141,6 +199,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button userButton;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
 
