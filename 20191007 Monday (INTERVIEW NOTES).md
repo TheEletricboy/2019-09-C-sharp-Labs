@@ -52,20 +52,20 @@ Overide keyword: using a base method in an derived class
 overload keyword: putting values into the parameters of a method
 Scrum 3 pillars:Transparancy, Inspection, Adaptation
 
-OOP 4 Pillars: 
+#OOP 4 Pillars: 
 	 inheritance:
 	 encapsulation: 
 	 polymorphism: inheritance with optional override
 	 abstraction:
 
-Agile:
+#Agile:
 	Flexible and adaptable: work in sprints
 
 	Collaboration over negociation
 	People over processes
 	Working software over documentation
 
-Scrum: 3 Roles
+#Scrum: 3 Roles
 		Scrum Master: removes blockers on the team
 		Product owner: owns backlogs, interacts with client
 		Devs 3-9: jointly accountable for the work
@@ -75,7 +75,7 @@ Scrum: 3 Roles
 		Backlogs: project backlog: for the project
 				  sprint backlog: the backlog for the sprint
 
-Sprint 4 meeting: Plan
+#Sprint 4 meeting: Plan
 				  Daily (yesterday, today, blockers)
 				  review(present work done to client)
 				  retro (internal review)
@@ -100,8 +100,8 @@ API
 		put 	/customers/10		UPDATE
 		delete 	/customers/10 		Delete
 
-CRUD 			create read update delete
-SQL		 		insert select update delete
+CRUD 			create, read, update, delete
+SQL		 		insert select update, delete
 SQL Database	create, drop IF EXISTS, alter
 
 ENUM

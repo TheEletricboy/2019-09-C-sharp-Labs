@@ -148,3 +148,9 @@ A) We have done MANUAL SEEDING which you can see is quite tricky.
 B) Regardless of the database relationships (Worst case can remove) or seeding (worst case just use existing seeding which we have done)
 
 	Console Core ==> Build CRUD APP
+
+
+
+#Seeding Manually (just for proof of concept)
+
+

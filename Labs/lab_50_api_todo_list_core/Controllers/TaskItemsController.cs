@@ -24,22 +24,22 @@ namespace lab_50_api_todo_list_core.Controllers
         [HttpGet]
         public List<TaskItem> GetTaskItems()
         {
-            var u = new User()
-            {
-                UserName = "King" // ID = 1
-            };
-            _context.Add<User>(u);
-            _context.SaveChanges();
-            var t = new TaskItem()
-            {
-                Description = "An Item",
-                DateDue = DateTime.Parse("21/09/2019"),
-                TaskDone = false,
-                UserID = 1
-            };
-            _context.Add<TaskItem>(t);
-            _context.SaveChanges();
-            System.Diagnostics.Trace.WriteLine($"Added a record with ID {t.TaskItemID} and user {u.UserName}");
+            //var u = new User()
+            //{
+            //    UserName = "King" // ID = 1
+            //};
+            //_context.Add<User>(u);
+            //_context.SaveChanges();
+            //var t = new TaskItem()
+            //{
+            //    Description = "An Item",
+            //    DateDue = DateTime.Parse("21/09/2019"),
+            //    TaskDone = false,
+            //    UserID = 1
+            //};
+            //_context.Add<TaskItem>(t);
+            //_context.SaveChanges();
+            //System.Diagnostics.Trace.WriteLine($"Added a record with ID {t.TaskItemID} and user {u.UserName}");
             return _context.TaskItems.ToList();
             //return _context.TaskItems;
         }
