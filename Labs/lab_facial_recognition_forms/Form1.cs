@@ -35,8 +35,8 @@ namespace lab_facial_recognition_forms
         int counter;
 
         static List<User> turdsUser;
-        string connectionString = @"Data Source=(localdb)\MSSQLLocalDB; Initial Catalog= TURDSDB; Integrated Security= True;";
-
+        static string connectionString = @"Data Source=(localdb)\MSSQLLocalDB; Initial Catalog= TURDSDB; Integrated Security= True;";
+        SqlConnection con = new SqlConnection(connectionString);
 
         public Form1()
         {
@@ -123,7 +123,9 @@ namespace lab_facial_recognition_forms
 
         private void userButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"This many users exist: {labels.Count}. \n\n This is the first label in the Array: {labels[0]}");
+            MessageBox.Show($"This many users exist: {labels.Count}. \n\n This is the first label in the Array: {labels[0]}" +
+                $"" +
+                $"\n\n number of labels: {NumLables}");
             //currentUserListBox.Items.Add("added to listbox");
         }
 
@@ -180,6 +182,24 @@ namespace lab_facial_recognition_forms
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
+            //labelsinf reads text from herever the file startsup + the folder Faces and the file txt
+            string Labelsinf = File.ReadAllText(Application.StartupPath + "/Faces/Faces.txt");
+            string[] Labels = Labelsinf.Split(','); //splits each object in Labels array with ','
+
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "delete from User where UserName='"+textboxDelete.Text+"'";
+            cmd.ExecuteNonQuery();
+            con.Close();
+            SqlShowAll();
+            MessageBox.Show($"User {textboxDelete.Text} Deleted successfully");
+            textboxDelete.Clear();
+
+            //subtracts 1  from NumLables
+            //NumLables -= 1;
+            //var results = Array.FindAll(Labels, s => s.Equals(textboxDelete.Text));
+            
 
         }
 
