@@ -12,6 +12,7 @@ using Emgu.CV.Structure;
 using System.IO;
 using System.Windows.Media.Imaging;
 using System.Windows;
+using System.Data.SqlClient;
 
 namespace lab_facial_recognition_forms
 {
@@ -34,22 +35,22 @@ namespace lab_facial_recognition_forms
         int counter;
 
         static List<User> turdsUser;
-
+        string connectionString = @"Data Source=(localdb)\MSSQLLocalDB; Initial Catalog= TRUDSDB; Integrated Security= True;";
 
 
 public Form1()
         {
             InitializeComponent();
             this.Text = "T.U.R.D.S. (Tiny User Recognition and Designator System)";
-            this.Size = new System.Drawing.Size(1130, 500);
+            this.Size = new System.Drawing.Size(770, 960);
             this.MaximizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
 
-            using (var db = new TURDSDBEntities())
-            {
-                turdsUser = db.Users.ToList();
-            }
+            //using (var db = new TURDSDBEntities())
+            //{
+            //    turdsUser = db.Users.ToList();
+            //}
 
             
 
@@ -156,7 +157,13 @@ public Form1()
                 //turdsUser.Add(newTurdsUser);
                 db.Users.Add(newTurdsUser);
                 db.SaveChanges();
+                
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
         private void start_Click(object sender, EventArgs e)
