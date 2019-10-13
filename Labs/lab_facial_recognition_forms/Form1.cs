@@ -31,10 +31,13 @@ namespace lab_facial_recognition_forms
         int Count, NumLables, t;
         string name, names = null;
         bool isFaceDetected;
-        
-        
+        int counter;
 
-        public Form1()
+        static List<User> turdsUser;
+
+
+
+public Form1()
         {
             InitializeComponent();
             this.Text = "T.U.R.D.S. (Tiny User Recognition and Designator System)";
@@ -42,7 +45,12 @@ namespace lab_facial_recognition_forms
             this.MaximizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
-            
+
+            using (var db = new TURDSDBEntities())
+            {
+                turdsUser = db.Users.ToList();
+            }
+
             
 
 
@@ -105,7 +113,12 @@ namespace lab_facial_recognition_forms
 
             }
             MessageBox.Show(textName.Text + ": " + "Added Successfully!");
+
+            
         }
+
+
+
 
         private void userButton_Click(object sender, EventArgs e)
         {
@@ -128,13 +141,31 @@ namespace lab_facial_recognition_forms
 
         }
 
+        private void logInButton_Click(object sender, EventArgs e)
+        {
+
+            var newTurdsUser = new User()
+            {
+                UserName = name,
+                SpartaId = counter++,
+                TimeArrived = DateTime.Now
+            };
+
+            using (var db = new TURDSDBEntities())
+            {
+                //turdsUser.Add(newTurdsUser);
+                db.Users.Add(newTurdsUser);
+                db.SaveChanges();
+            }
+        }
+
         private void start_Click(object sender, EventArgs e)
         {
             camera = new Capture();
             camera.QueryFrame();
             Application.Idle += new EventHandler(FrameProcedure);
         }
-
+        
 
 
 
@@ -168,6 +199,8 @@ namespace lab_facial_recognition_forms
                     {
                         currentUserListBox.Items.Add(name + " " + DateTime.Now);
                     }
+
+
                     //if (currentUserListBox.Items.Count > 0)
                     //{
                     //    currentUserListBox.SetSelected(0, true);

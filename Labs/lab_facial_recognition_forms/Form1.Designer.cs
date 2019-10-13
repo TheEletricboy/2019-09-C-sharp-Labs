@@ -43,6 +43,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.currentUserListBox = new System.Windows.Forms.ListBox();
+            this.logInButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.cameraBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +60,7 @@
             // 
             this.start.Location = new System.Drawing.Point(554, 82);
             this.start.Name = "start";
-            this.start.Size = new System.Drawing.Size(109, 92);
+            this.start.Size = new System.Drawing.Size(109, 45);
             this.start.TabIndex = 3;
             this.start.Text = "Start Detection and Recognition";
             this.start.UseVisualStyleBackColor = true;
@@ -182,6 +183,17 @@
             this.currentUserListBox.Size = new System.Drawing.Size(245, 160);
             this.currentUserListBox.TabIndex = 14;
             // 
+            // logInButton
+            // 
+            this.logInButton.BackColor = System.Drawing.Color.ForestGreen;
+            this.logInButton.Location = new System.Drawing.Point(554, 175);
+            this.logInButton.Name = "logInButton";
+            this.logInButton.Size = new System.Drawing.Size(109, 54);
+            this.logInButton.TabIndex = 15;
+            this.logInButton.Text = "LOG INTO BUILDING";
+            this.logInButton.UseVisualStyleBackColor = false;
+            this.logInButton.Click += new System.EventHandler(this.logInButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,6 +201,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1114, 461);
+            this.Controls.Add(this.logInButton);
             this.Controls.Add(this.currentUserListBox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -228,6 +241,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ListBox currentUserListBox;
+        private System.Windows.Forms.Button logInButton;
     }
 }
 
