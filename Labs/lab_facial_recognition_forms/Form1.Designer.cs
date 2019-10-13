@@ -46,6 +46,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.dgv1 = new System.Windows.Forms.DataGridView();
             this.displayDataButton = new System.Windows.Forms.Button();
+            this.deleteButton = new System.Windows.Forms.Button();
+            this.textboxDelete = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.cameraBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             this.SuspendLayout();
@@ -161,7 +164,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Chocolate;
-            this.label7.Location = new System.Drawing.Point(43, 588);
+            this.label7.Location = new System.Drawing.Point(43, 460);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(121, 13);
             this.label7.TabIndex = 13;
@@ -170,7 +173,7 @@
             // currentUserListBox
             // 
             this.currentUserListBox.FormattingEnabled = true;
-            this.currentUserListBox.Location = new System.Drawing.Point(46, 604);
+            this.currentUserListBox.Location = new System.Drawing.Point(46, 476);
             this.currentUserListBox.Name = "currentUserListBox";
             this.currentUserListBox.Size = new System.Drawing.Size(245, 43);
             this.currentUserListBox.TabIndex = 14;
@@ -201,7 +204,7 @@
             // dgv1
             // 
             this.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv1.Location = new System.Drawing.Point(46, 653);
+            this.dgv1.Location = new System.Drawing.Point(46, 580);
             this.dgv1.Name = "dgv1";
             this.dgv1.Size = new System.Drawing.Size(405, 203);
             this.dgv1.TabIndex = 17;
@@ -209,13 +212,43 @@
             // 
             // displayDataButton
             // 
-            this.displayDataButton.Location = new System.Drawing.Point(308, 604);
+            this.displayDataButton.BackColor = System.Drawing.Color.Turquoise;
+            this.displayDataButton.Location = new System.Drawing.Point(342, 802);
             this.displayDataButton.Name = "displayDataButton";
             this.displayDataButton.Size = new System.Drawing.Size(109, 43);
             this.displayDataButton.TabIndex = 18;
-            this.displayDataButton.Text = "Display  ALL";
-            this.displayDataButton.UseVisualStyleBackColor = true;
+            this.displayDataButton.Text = "Display  All Data";
+            this.displayDataButton.UseVisualStyleBackColor = false;
             this.displayDataButton.Click += new System.EventHandler(this.displayDataButton_Click);
+            // 
+            // deleteButton
+            // 
+            this.deleteButton.BackColor = System.Drawing.Color.OrangeRed;
+            this.deleteButton.Location = new System.Drawing.Point(231, 802);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(60, 43);
+            this.deleteButton.TabIndex = 19;
+            this.deleteButton.Text = "DELETE";
+            this.deleteButton.UseVisualStyleBackColor = false;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
+            // 
+            // textboxDelete
+            // 
+            this.textboxDelete.Location = new System.Drawing.Point(46, 825);
+            this.textboxDelete.Name = "textboxDelete";
+            this.textboxDelete.Size = new System.Drawing.Size(169, 20);
+            this.textboxDelete.TabIndex = 20;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Chocolate;
+            this.label2.Location = new System.Drawing.Point(43, 809);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 13);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Delete User";
             // 
             // Form1
             // 
@@ -224,6 +257,9 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(754, 921);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textboxDelete);
+            this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.displayDataButton);
             this.Controls.Add(this.dgv1);
             this.Controls.Add(this.label8);
@@ -270,6 +306,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dgv1;
         private System.Windows.Forms.Button displayDataButton;
+        private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.TextBox textboxDelete;
+        private System.Windows.Forms.Label label2;
     }
 }
 

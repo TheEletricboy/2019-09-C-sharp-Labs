@@ -38,7 +38,7 @@ namespace lab_facial_recognition_forms
         string connectionString = @"Data Source=(localdb)\MSSQLLocalDB; Initial Catalog= TURDSDB; Integrated Security= True;";
 
 
-public Form1()
+        public Form1()
         {
             InitializeComponent();
             this.Text = "T.U.R.D.S. (Tiny User Recognition and Designator System)";
@@ -177,7 +177,12 @@ public Form1()
             camera.QueryFrame();
             Application.Idle += new EventHandler(FrameProcedure);
         }
-        
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
 
 
