@@ -129,8 +129,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_46_read_api", "lab_46_r
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_46_mvc_consume_api", "lab_46_mvc_consume_api\lab_46_mvc_consume_api.csproj", "{E4567FEE-B039-44E6-A187-A376F5D52159}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_facial_recognition_forms", "lab_facial_recognition_forms\lab_facial_recognition_forms.csproj", "{EFA34F73-E402-401B-92D3-8DC574A38DE9}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_just_do_it_dotnetframwork_api", "lab_just_do_it_dotnetframwork_api\lab_just_do_it_dotnetframwork_api.csproj", "{287CA374-F0DC-4569-8A41-75BF9DD07698}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_just_do_it_http_web_request", "lab_just_do_it_http_web_request\lab_just_do_it_http_web_request.csproj", "{F5FB2F24-2A12-48F8-9C4B-0F250C5C255B}"
@@ -141,9 +139,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project_FaceRecognition", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_facial_recognition_wpf", "lab_facial_recognition_wpf\lab_facial_recognition_wpf.csproj", "{A4FAC3CB-9BB4-4106-851B-662E217EDEEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_48_read_api", "lab_48_read_api\lab_48_read_api.csproj", "{E56D3A80-2CB5-45AB-9E8A-5FD74971C3D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_48_read_api", "lab_48_read_api\lab_48_read_api.csproj", "{E56D3A80-2CB5-45AB-9E8A-5FD74971C3D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_48_mvc_read_API", "lab_48_mvc_read_API\lab_48_mvc_read_API.csproj", "{232C99BA-D1D3-40A7-AEB5-5A884F531B41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_48_mvc_read_API", "lab_48_mvc_read_API\lab_48_mvc_read_API.csproj", "{232C99BA-D1D3-40A7-AEB5-5A884F531B41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_facial_recognition_forms", "lab_facial_recognition_forms\lab_facial_recognition_forms.csproj", "{EFA34F73-E402-401B-92D3-8DC574A38DE9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1169,22 +1169,6 @@ Global
 		{E4567FEE-B039-44E6-A187-A376F5D52159}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{E4567FEE-B039-44E6-A187-A376F5D52159}.Release|x86.ActiveCfg = Release|Any CPU
 		{E4567FEE-B039-44E6-A187-A376F5D52159}.Release|x86.Build.0 = Release|Any CPU
-		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Debug|iPhone.Build.0 = Debug|Any CPU
-		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
-		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Debug|x86.Build.0 = Debug|Any CPU
-		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Release|iPhone.Build.0 = Release|Any CPU
-		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
-		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Release|x86.ActiveCfg = Release|Any CPU
-		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Release|x86.Build.0 = Release|Any CPU
 		{287CA374-F0DC-4569-8A41-75BF9DD07698}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{287CA374-F0DC-4569-8A41-75BF9DD07698}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{287CA374-F0DC-4569-8A41-75BF9DD07698}.Debug|iPhone.ActiveCfg = Debug|Any CPU
@@ -1297,6 +1281,22 @@ Global
 		{232C99BA-D1D3-40A7-AEB5-5A884F531B41}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{232C99BA-D1D3-40A7-AEB5-5A884F531B41}.Release|x86.ActiveCfg = Release|Any CPU
 		{232C99BA-D1D3-40A7-AEB5-5A884F531B41}.Release|x86.Build.0 = Release|Any CPU
+		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Debug|x86.Build.0 = Debug|Any CPU
+		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Release|iPhone.Build.0 = Release|Any CPU
+		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Release|x86.ActiveCfg = Release|Any CPU
+		{EFA34F73-E402-401B-92D3-8DC574A38DE9}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
