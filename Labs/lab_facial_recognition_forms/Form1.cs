@@ -30,15 +30,20 @@ namespace lab_facial_recognition_forms
         List<string> Users = new List<string>();
         int Count, NumLables, t;
         string name, names = null;
+        bool isFaceDetected;
+        
+        
 
         public Form1()
         {
             InitializeComponent();
             this.Text = "T.U.R.D.S. (Tiny User Recognition and Designator System)";
-            this.Size = new System.Drawing.Size(800, 500);
+            this.Size = new System.Drawing.Size(1130, 500);
             this.MaximizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
+            
+            
 
 
 
@@ -104,7 +109,8 @@ namespace lab_facial_recognition_forms
 
         private void userButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"This many users exist: {labels.Count}. \n\n This is the first label in the Array: {labels[2]}");
+            MessageBox.Show($"This many users exist: {labels.Count}. \n\n This is the first label in the Array: {labels[0]}");
+            //currentUserListBox.Items.Add("added to listbox");
         }
 
         private void cameraBox_Click(object sender, EventArgs e)
@@ -152,14 +158,63 @@ namespace lab_facial_recognition_forms
                     name = recognizer.Recognize(result);
                     Frame.Draw(name, ref font, new System.Drawing.Point(f.rect.X -2, f.rect.Y -2), new Bgr(Color.Red));
 
+                    
+                    isFaceDetected = true;
+                    if (name == "")
+                    {
+                        //donothing
+                    }
+                    else if (name != "")
+                    {
+                        currentUserListBox.Items.Add(name + " " + DateTime.Now);
+                    }
+                    //if (currentUserListBox.Items.Count > 0)
+                    //{
+                    //    currentUserListBox.SetSelected(0, true);
+                        
+                    //}
+                    //make it so that after 3milisseconds it clears the list
+
+
+
+
                 }
                 //Users[t - 1] = name;
+                //currentUserListBox.Items.Clear();
+                isFaceDetected = false;
                 Users.Add("");
             }
-
+            
             cameraBox.Image = Frame;
             names = "";
             Users.Clear();
+            //currentUserListBox.Items.Clear();
+            
+
+
+        }
+
+        
+
+    private void UpdateListBox1()
+        {
+            //if (isFaceDetected == true)
+            //{
+            //    currentUserListBox.Items.Add(name);
+            //    System.Threading.Thread.Sleep(500);
+            //    return;
+            //}
+            //else
+            //{
+            //    currentUserListBox.Items.Clear();
+            //    System.Threading.Thread.Sleep(500);
+            //    return;
+            //}
+            
+            currentUserListBox.Items.Add(name);
+            System.Threading.Thread.Sleep(500);
+            
+
 
 
         }

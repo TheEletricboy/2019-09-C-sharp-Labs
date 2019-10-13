@@ -41,6 +41,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.currentUserListBox = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.cameraBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -161,13 +163,34 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "(Tiny User Recognition and Designator System)";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Chocolate;
+            this.label7.Location = new System.Drawing.Point(823, 30);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(121, 13);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Current User in frame: ";
+            // 
+            // currentUserListBox
+            // 
+            this.currentUserListBox.FormattingEnabled = true;
+            this.currentUserListBox.Location = new System.Drawing.Point(773, 82);
+            this.currentUserListBox.Name = "currentUserListBox";
+            this.currentUserListBox.Size = new System.Drawing.Size(245, 160);
+            this.currentUserListBox.TabIndex = 14;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.ClientSize = new System.Drawing.Size(1114, 461);
+            this.Controls.Add(this.currentUserListBox);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -203,6 +226,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ListBox currentUserListBox;
     }
 }
 
