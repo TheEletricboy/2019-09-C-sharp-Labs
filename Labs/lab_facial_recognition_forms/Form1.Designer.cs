@@ -45,6 +45,7 @@
             this.logInButton = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.dgv1 = new System.Windows.Forms.DataGridView();
+            this.displayDataButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.cameraBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             this.SuspendLayout();
@@ -206,6 +207,16 @@
             this.dgv1.TabIndex = 17;
             this.dgv1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // displayDataButton
+            // 
+            this.displayDataButton.Location = new System.Drawing.Point(308, 604);
+            this.displayDataButton.Name = "displayDataButton";
+            this.displayDataButton.Size = new System.Drawing.Size(109, 43);
+            this.displayDataButton.TabIndex = 18;
+            this.displayDataButton.Text = "Display  ALL";
+            this.displayDataButton.UseVisualStyleBackColor = true;
+            this.displayDataButton.Click += new System.EventHandler(this.displayDataButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -213,6 +224,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(754, 921);
+            this.Controls.Add(this.displayDataButton);
             this.Controls.Add(this.dgv1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.logInButton);
@@ -257,6 +269,7 @@
         private System.Windows.Forms.Button logInButton;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dgv1;
+        private System.Windows.Forms.Button displayDataButton;
     }
 }
 

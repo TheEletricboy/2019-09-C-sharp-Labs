@@ -35,7 +35,7 @@ namespace lab_facial_recognition_forms
         int counter;
 
         static List<User> turdsUser;
-        string connectionString = @"Data Source=(localdb)\MSSQLLocalDB; Initial Catalog= TRUDSDB; Integrated Security= True;";
+        string connectionString = @"Data Source=(localdb)\MSSQLLocalDB; Initial Catalog= TURDSDB; Integrated Security= True;";
 
 
 public Form1()
@@ -157,13 +157,18 @@ public Form1()
                 //turdsUser.Add(newTurdsUser);
                 db.Users.Add(newTurdsUser);
                 db.SaveChanges();
-                
             }
+            SqlShowAll();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void displayDataButton_Click(object sender, EventArgs e)
+        {
+            SqlShowAll();
         }
 
         private void start_Click(object sender, EventArgs e)
@@ -234,7 +239,18 @@ public Form1()
 
         }
 
-        
+    private void SqlShowAll()
+        {
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Users", sqlCon);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+                dgv1.DataSource = dtbl;
+
+            }
+        }    
 
     private void UpdateListBox1()
         {
