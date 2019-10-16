@@ -24,7 +24,7 @@ namespace lab_48_read_api
             GetTaskItemAsync(1).Wait();
             DisplayTaskItem();
 
-            DeleteTaskItemAsync(taskitem);
+            DeleteTaskItemAsync(taskItem);
 
             //var t = new TaskItem
             //{

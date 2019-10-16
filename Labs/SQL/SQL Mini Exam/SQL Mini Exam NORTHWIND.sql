@@ -89,3 +89,34 @@ insert into SpartansTable values('Mr','Mohsin', 'NA', 'NA', 'NA', 'NA')
 
 select * from SpartansTable
 --end 2.0
+
+--3.1 
+select e.FirstName + '' + e.LastName AS "Employee Name", b.FirstName + '' + b.LastName AS "Reports To"
+FROM Emplyees e
+INNER JOIN Employees b ON e.ReportsTo=b.EmployeeID
+ORDER BY "Reports To", "Employee Name";
+
+--3.2
+SELECT s.CompanyName,SUM(od.UnitPrice*od.Quantity*(1-od.Discount)) As "Supplier Total"
+      FROM [Order Details] od
+      INNER JOIN Products p ON od.ProductID=p.ProductID
+      INNER JOIN Suppliers s ON p.SupplierID=s.SupplierID
+      GROUP BY s.CompanyName
+      HAVING SUM(od.UnitPrice*od.Quantity*(1-od.Discount))>10000
+      ORDER BY SUM(od.UnitPrice*od.Quantity*(1-od.Discount)) DESC;
+
+--3.3
+SELECT TOP 10 c.CustomerID AS "Customer ID", c.CompanyName As "Company",
+FORMAT(SUM(UnitPrice * Quantity * (1-Discount)),'C') 
+AS "YTD Sales"
+FROM Customers c
+            INNER JOIN Orders o ON o.CustomerID=c.CustomerID
+            INNER JOIN [Order Details] od ON od.OrderID=o.OrderID
+      WHERE YEAR(OrderDate)=(SELECT MAX(YEAR(OrderDate)) From Orders)
+      --WHERE YEAR(OrderDate)=1998 --WHERE YEAR(OrderDate)='1998'
+
+AND o.ShippedDate IS NOT NULL
+      GROUP BY c.CustomerID, c.CompanyName
+      ORDER BY SUM(UnitPrice * Quantity * (1-Discount)) DESC;
+
+--3.4
