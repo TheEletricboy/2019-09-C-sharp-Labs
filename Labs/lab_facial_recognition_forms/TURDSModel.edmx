@@ -9,7 +9,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UserName" Type="nvarchar" MaxLength="50" />
           <Property Name="SpartaId" Type="int" />
           <Property Name="TimeArrived" Type="datetime" />
@@ -31,7 +31,7 @@
           <Property Name="SpartaId" Type="Int32" />
           <Property Name="TimeArrived" Type="DateTime" Precision="3" />
         </EntityType>
-        <EntityContainer Name="TURDSDBEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="TURDSDBEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Users" EntityType="Self.User" />
         </EntityContainer>
       </Schema>
@@ -39,7 +39,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="TURDSDBModelStoreContainer" CdmEntityContainer="TURDSDBEntities">
+        <EntityContainerMapping StorageEntityContainer="TURDSDBModelStoreContainer" CdmEntityContainer="TURDSDBEntities1">
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="TURDSDBModel.User">
               <MappingFragment StoreEntitySet="Users">

@@ -13,10 +13,10 @@ namespace lab_facial_recognition_forms
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class TURDSDBEntities1 : DbContext
+    public partial class TURDSLoginUserEntities : DbContext
     {
-        public TURDSDBEntities1()
-            : base("name=TURDSDBEntities1")
+        public TURDSLoginUserEntities()
+            : base("name=TURDSLoginUserEntities")
         {
         }
     
@@ -25,6 +25,6 @@ namespace lab_facial_recognition_forms
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<LoginUser> LoginUsers { get; set; }
     }
 }

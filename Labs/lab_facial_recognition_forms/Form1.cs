@@ -157,7 +157,7 @@ namespace lab_facial_recognition_forms
                 TimeArrived = DateTime.Now
             };
 
-            using (var db = new TURDSDBEntities())
+            using (var db = new TURDSDBEntities1())
             {
                 //turdsUser.Add(newTurdsUser);
                 db.Users.Add(newTurdsUser);

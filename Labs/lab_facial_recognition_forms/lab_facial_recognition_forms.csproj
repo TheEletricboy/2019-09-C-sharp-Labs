@@ -184,8 +184,26 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginUser.cs">
+      <DependentUpon>TURDSLoginUserModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TURDSLoginUserModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TURDSLoginUserModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TURDSLoginUserModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TURDSLoginUserModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TURDSLoginUserModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TURDSLoginUserModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="TURDSModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -233,6 +251,13 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>TURDSModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <EntityDeploy Include="TURDSLoginUserModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TURDSLoginUserModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="TURDSLoginUserModel.edmx.diagram">
+      <DependentUpon>TURDSLoginUserModel.edmx</DependentUpon>
+    </None>
     <None Include="TURDSModel.edmx.diagram">
       <DependentUpon>TURDSModel.edmx</DependentUpon>
     </None>
@@ -241,19 +266,29 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TURDSLoginUserModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TURDSLoginUserModel.edmx</DependentUpon>
+      <LastGenOutput>TURDSLoginUserModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="TURDSLoginUserModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TURDSLoginUserModel.edmx</DependentUpon>
+      <LastGenOutput>TURDSLoginUserModel.cs</LastGenOutput>
+    </Content>
     <Content Include="TURDSModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>TURDSModel.Context.cs</LastGenOutput>
       <DependentUpon>TURDSModel.edmx</DependentUpon>
+      <LastGenOutput>TURDSModel.Context.cs</LastGenOutput>
     </Content>
     <Content Include="TURDSModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>TURDSModel.edmx</DependentUpon>
       <LastGenOutput>TURDSModel.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.11\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets" Condition="Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.11\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets')" />
