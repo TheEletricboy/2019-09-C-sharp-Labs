@@ -13,6 +13,8 @@ using System.IO;
 using System.Windows.Media.Imaging;
 using System.Windows;
 using System.Data.SqlClient;
+using System.Diagnostics;
+using System.Web;
 
 namespace lab_facial_recognition_forms
 {
@@ -42,17 +44,18 @@ namespace lab_facial_recognition_forms
         {
             InitializeComponent();
             this.Text = "T.U.R.D.S. (Tiny User Recognition and Designator System)";
-            this.Size = new System.Drawing.Size(770, 960);
+            this.Size = new System.Drawing.Size(770, 750);
             this.MaximizeBox = false;
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
+            //Adding that string to the list on execution to make it simpler for the Excel File creation
+            currentUserListBox.Items.Add("User Name, Date Logged on");
 
             //using (var db = new TURDSDBEntities())
             //{
             //    turdsUser = db.Users.ToList();
             //}
 
-            
+
 
 
 
@@ -189,17 +192,43 @@ namespace lab_facial_recognition_forms
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "delete from User where UserName='"+textboxDelete.Text+"'";
+            cmd.CommandText = "DELETE from Users where UserName='"+textboxDelete.Text+"'";
             cmd.ExecuteNonQuery();
             con.Close();
             SqlShowAll();
-            MessageBox.Show($"User {textboxDelete.Text} Deleted successfully");
+            MessageBox.Show($"All Log-ons for User: {textboxDelete.Text} \n\nDeleted successfully");
             textboxDelete.Clear();
 
             //subtracts 1  from NumLables
             //NumLables -= 1;
             //var results = Array.FindAll(Labels, s => s.Equals(textboxDelete.Text));
             
+
+        }
+
+        private void exportToExcel_Click(object sender, EventArgs e)
+        {
+            List<string> currentUserList = new List<string>();
+            var tempString = "";
+
+            foreach (var item in currentUserListBox.Items)
+            {
+                currentUserList.Add(item.ToString());
+                tempString += item.ToString();
+                tempString += ", " + "\n\n";
+            }
+            //tempString is now the whole list
+            //currentUserListBox.
+            MessageBox.Show(tempString);
+            File.WriteAllLines("data.txt", currentUserList.ToArray());
+            File.WriteAllLines("data.csv", currentUserList.ToArray());
+
+            Console.WriteLine("Data Written");
+            Process.Start("EXCEL.exe", "data.csv");
+        }
+
+        private void currentUserListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
 
@@ -234,7 +263,7 @@ namespace lab_facial_recognition_forms
                     }
                     else if (name != "")
                     {
-                        currentUserListBox.Items.Add(name + " " + DateTime.Now);
+                        currentUserListBox.Items.Add(name + ", " + DateTime.Now);
                     }
 
 
@@ -275,7 +304,7 @@ namespace lab_facial_recognition_forms
                 dgv1.DataSource = dtbl;
 
             }
-        }    
+        }
 
     private void UpdateListBox1()
         {
