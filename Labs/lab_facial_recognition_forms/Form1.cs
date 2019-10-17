@@ -232,6 +232,17 @@ namespace lab_facial_recognition_forms
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var form1 = new Form1();
+            var loginForm = new LoginForm();
+            this.Close();
+            
+            
+
+            
+        }
+
 
 
 
