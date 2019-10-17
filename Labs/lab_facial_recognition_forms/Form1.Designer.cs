@@ -57,9 +57,9 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
             this.exportToExcel = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.cameraBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             this.SuspendLayout();
@@ -357,14 +357,6 @@
             this.panel8.Size = new System.Drawing.Size(292, 1);
             this.panel8.TabIndex = 24;
             // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.Red;
-            this.panel9.Location = new System.Drawing.Point(40, 55);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(570, 1);
-            this.panel9.TabIndex = 24;
-            // 
             // exportToExcel
             // 
             this.exportToExcel.Location = new System.Drawing.Point(667, 482);
@@ -388,6 +380,14 @@
             this.label9.Size = new System.Drawing.Size(366, 48);
             this.label9.TabIndex = 27;
             this.label9.Text = "Database Log-on.";
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Red;
+            this.panel9.Location = new System.Drawing.Point(40, 55);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(570, 1);
+            this.panel9.TabIndex = 24;
             // 
             // Form1
             // 
@@ -467,9 +467,9 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button exportToExcel;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panel9;
     }
 }
 
