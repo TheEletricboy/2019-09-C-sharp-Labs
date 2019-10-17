@@ -71,16 +71,17 @@ namespace lab_facial_recognition_forms
                         MessageBox.Show($"You are Logging as: {dt.Rows[i][2]}");
                         if (comboBox1.SelectedIndex == 0)
                         {
+                            passwordTextbox.Clear();
                             var form1 = new Form1();
                             form1.Show();
                         }
                         else
                         {
+                            passwordTextbox.Clear();
                             //turns UserLabel into user
                             userLabel.Text = dt.Rows[i][2].ToString();
-                            //SqlShow();
                             userPanel.BringToFront();
-                            //loginPanel.Hide();
+                            
                         }
                     }
                 }

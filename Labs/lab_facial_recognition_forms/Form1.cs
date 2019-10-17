@@ -219,7 +219,7 @@ namespace lab_facial_recognition_forms
             }
             //tempString is now the whole list
             //currentUserListBox.
-            MessageBox.Show(tempString);
+            //MessageBox.Show(tempString);
             File.WriteAllLines("data.txt", currentUserList.ToArray());
             File.WriteAllLines("data.csv", currentUserList.ToArray());
 

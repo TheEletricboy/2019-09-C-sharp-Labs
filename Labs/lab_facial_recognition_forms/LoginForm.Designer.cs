@@ -39,7 +39,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.debug1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.loginButton = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -64,7 +63,6 @@
             this.loginPanel.Controls.Add(this.label5);
             this.loginPanel.Controls.Add(this.label4);
             this.loginPanel.Controls.Add(this.pictureBox1);
-            this.loginPanel.Controls.Add(this.debug1);
             this.loginPanel.Controls.Add(this.panel2);
             this.loginPanel.Controls.Add(this.loginButton);
             this.loginPanel.Controls.Add(this.comboBox1);
@@ -187,20 +185,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(276, 251);
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
-            // 
-            // debug1
-            // 
-            this.debug1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.debug1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.debug1.ForeColor = System.Drawing.Color.Red;
-            this.debug1.Location = new System.Drawing.Point(2, 305);
-            this.debug1.Margin = new System.Windows.Forms.Padding(2);
-            this.debug1.Name = "debug1";
-            this.debug1.Size = new System.Drawing.Size(143, 27);
-            this.debug1.TabIndex = 11;
-            this.debug1.Text = "DEBUGGER TO FORM1";
-            this.debug1.UseVisualStyleBackColor = true;
-            this.debug1.Click += new System.EventHandler(this.debug1_Click);
             // 
             // panel2
             // 
@@ -382,7 +366,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button debug1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
