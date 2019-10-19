@@ -13,6 +13,7 @@ namespace lab_facial_recognition_forms
 {
     public partial class LoginForm : Form
     {
+        
         static string connectionString = @"Data Source=(localdb)\MSSQLLocalDB; Initial Catalog= TURDSLoginUser; Integrated Security= True;";
         public LoginForm()
         {
@@ -20,11 +21,14 @@ namespace lab_facial_recognition_forms
 
             //userPanel.Hide();
 
+            
             this.Text = "T.U.R.D.S. (Tiny User Recognition and Designator System)";
-            this.Size = new System.Drawing.Size(726, 405);
+            this.Size = new System.Drawing.Size(270, 520);
             this.MaximizeBox = false;
+            
 
-
+            this.StartPosition = FormStartPosition.CenterScreen;
+            Center(this);
 
 
             //When you click ENTER it activates the LoginButton
@@ -37,6 +41,11 @@ namespace lab_facial_recognition_forms
 
 
 
+        }
+
+        private void Center(Form form)
+        {
+            form.Location = new Point((Screen.PrimaryScreen.Bounds.Size.Width / 2) - (form.Size.Width / 2), (Screen.PrimaryScreen.Bounds.Size.Height / 2) - (form.Size.Height / 2));
         }
 
         private void debug1_Click(object sender, EventArgs e)
@@ -78,11 +87,15 @@ namespace lab_facial_recognition_forms
                         }
                         else
                         {
+                            //goes into user panel
+                            loginPanel.SendToBack();
+                            userPanel.BringToFront();
                             passwordTextbox.Clear();
                             //turns UserLabel into user
                             userLabel.Text = dt.Rows[i][2].ToString();
-                            userPanel.BringToFront();
-                            
+                            this.Size = new System.Drawing.Size(744, 520);
+                            Center(this);
+
                         }
                     }
                 }
@@ -120,8 +133,11 @@ namespace lab_facial_recognition_forms
         private void logoutButton_Click(object sender, EventArgs e)
         {
             //dataGridView1.Rows.Clear();
-            loginPanel.BringToFront();
+            this.Size = new System.Drawing.Size(270, 520);
+            Center(this);
             userPanel.SendToBack();
+            loginPanel.BringToFront();
+            
 
             userNameTextBox.Clear();
             passwordTextbox.Clear();
@@ -130,6 +146,26 @@ namespace lab_facial_recognition_forms
         private void userNameTextBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void passwordTextbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loginPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
