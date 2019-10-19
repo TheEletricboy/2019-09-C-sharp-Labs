@@ -26,6 +26,7 @@ namespace lab_facial_recognition_forms
 
 
 
+
             //When you click ENTER it activates the LoginButton
             passwordTextbox.KeyDown += (sender, args) => {
                 if (args.KeyCode == Keys.Return)
@@ -124,6 +125,11 @@ namespace lab_facial_recognition_forms
 
             userNameTextBox.Clear();
             passwordTextbox.Clear();
+        }
+
+        private void userNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
