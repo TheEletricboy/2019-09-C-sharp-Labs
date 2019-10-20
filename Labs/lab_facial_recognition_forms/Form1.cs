@@ -46,14 +46,12 @@ namespace lab_facial_recognition_forms
             this.Text = "T.U.R.D.S. (Tiny User Recognition and Designator System)";
             this.Size = new System.Drawing.Size(770, 750);
             this.MaximizeBox = false;
+            failedWebcamLabel.Hide();
 
             //Adding that string to the list on execution to make it simpler for the Excel File creation
             currentUserListBox.Items.Add("User Name, Date Logged on");
 
-            //using (var db = new TURDSDBEntities())
-            //{
-            //    turdsUser = db.Users.ToList();
-            //}
+            
 
 
 
@@ -178,9 +176,23 @@ namespace lab_facial_recognition_forms
 
         private void start_Click(object sender, EventArgs e)
         {
-            camera = new Capture();
-            camera.QueryFrame();
-            Application.Idle += new EventHandler(FrameProcedure);
+            //if when connecting to webcam an exception comes then show the message box to try again
+            try
+            {
+                camera = new Capture();
+                camera.QueryFrame();
+                Application.Idle += new EventHandler(FrameProcedure);
+                failedWebcamLabel.Hide();
+
+            }
+            catch (Exception)
+            {
+
+                //MessageBox.Show("No Webcam detected!\n\n Please connect one to continue.");
+                failedWebcamLabel.Show();
+            }
+            
+            
         }
 
         private void deleteButton_Click(object sender, EventArgs e)

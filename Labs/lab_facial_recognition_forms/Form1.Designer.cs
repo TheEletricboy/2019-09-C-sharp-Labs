@@ -64,6 +64,7 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.failedWebcamLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.cameraBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -479,12 +480,24 @@
             this.label10.TabIndex = 40;
             this.label10.Text = "© TURDS by Miguel Vieira 2019";
             // 
+            // failedWebcamLabel
+            // 
+            this.failedWebcamLabel.AutoSize = true;
+            this.failedWebcamLabel.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.failedWebcamLabel.ForeColor = System.Drawing.Color.Red;
+            this.failedWebcamLabel.Location = new System.Drawing.Point(164, 397);
+            this.failedWebcamLabel.Name = "failedWebcamLabel";
+            this.failedWebcamLabel.Size = new System.Drawing.Size(279, 13);
+            this.failedWebcamLabel.TabIndex = 41;
+            this.failedWebcamLabel.Text = "No Webcam detected, please connect one to continue.";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(754, 811);
+            this.Controls.Add(this.failedWebcamLabel);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox11);
@@ -578,6 +591,7 @@
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label failedWebcamLabel;
     }
 }
 
