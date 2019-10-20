@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.loginPanel = new System.Windows.Forms.Panel();
-            this.imageBox1 = new Emgu.CV.UI.ImageBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,20 +51,28 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.userLabel = new System.Windows.Forms.Label();
-            this.imageBox2 = new Emgu.CV.UI.ImageBox();
+            this.failedLoginLabel = new System.Windows.Forms.Label();
+            this.failedLoginLabel2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.loadingGif = new System.Windows.Forms.PictureBox();
             this.loginPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imageBox1)).BeginInit();
             this.userPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loadingGif)).BeginInit();
             this.SuspendLayout();
             // 
             // loginPanel
             // 
             this.loginPanel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.loginPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.loginPanel.Controls.Add(this.imageBox1);
+            this.loginPanel.Controls.Add(this.loadingGif);
+            this.loginPanel.Controls.Add(this.pictureBox1);
+            this.loginPanel.Controls.Add(this.failedLoginLabel2);
+            this.loginPanel.Controls.Add(this.failedLoginLabel);
             this.loginPanel.Controls.Add(this.button1);
             this.loginPanel.Controls.Add(this.label5);
             this.loginPanel.Controls.Add(this.label2);
@@ -81,20 +87,9 @@
             this.loginPanel.Location = new System.Drawing.Point(0, 0);
             this.loginPanel.Margin = new System.Windows.Forms.Padding(2);
             this.loginPanel.Name = "loginPanel";
-            this.loginPanel.Size = new System.Drawing.Size(287, 520);
+            this.loginPanel.Size = new System.Drawing.Size(340, 520);
             this.loginPanel.TabIndex = 0;
             this.loginPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.loginPanel_Paint);
-            // 
-            // imageBox1
-            // 
-            this.imageBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("imageBox1.BackgroundImage")));
-            this.imageBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imageBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("imageBox1.InitialImage")));
-            this.imageBox1.Location = new System.Drawing.Point(-14, 0);
-            this.imageBox1.Name = "imageBox1";
-            this.imageBox1.Size = new System.Drawing.Size(303, 167);
-            this.imageBox1.TabIndex = 2;
-            this.imageBox1.TabStop = false;
             // 
             // button1
             // 
@@ -103,7 +98,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Roboto", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.DimGray;
-            this.button1.Location = new System.Drawing.Point(172, 439);
+            this.button1.Location = new System.Drawing.Point(227, 445);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(69, 27);
@@ -130,7 +125,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(21, 379);
+            this.label2.Location = new System.Drawing.Point(30, 363);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 17);
@@ -140,10 +135,10 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DimGray;
-            this.panel2.Location = new System.Drawing.Point(25, 416);
+            this.panel2.Location = new System.Drawing.Point(34, 400);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(216, 1);
+            this.panel2.Size = new System.Drawing.Size(262, 1);
             this.panel2.TabIndex = 5;
             // 
             // loginButton
@@ -153,7 +148,7 @@
             this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginButton.Font = new System.Drawing.Font("Roboto", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginButton.ForeColor = System.Drawing.Color.DimGray;
-            this.loginButton.Location = new System.Drawing.Point(24, 439);
+            this.loginButton.Location = new System.Drawing.Point(33, 445);
             this.loginButton.Margin = new System.Windows.Forms.Padding(2);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(69, 27);
@@ -170,23 +165,24 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Admin",
             "User"});
-            this.comboBox1.Location = new System.Drawing.Point(25, 232);
+            this.comboBox1.Location = new System.Drawing.Point(34, 216);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(92, 21);
             this.comboBox1.TabIndex = 9;
             this.comboBox1.Text = "<User Type>";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // passwordTextbox
             // 
             this.passwordTextbox.BackColor = System.Drawing.Color.WhiteSmoke;
             this.passwordTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.passwordTextbox.ForeColor = System.Drawing.Color.Black;
-            this.passwordTextbox.Location = new System.Drawing.Point(25, 399);
+            this.passwordTextbox.Location = new System.Drawing.Point(34, 383);
             this.passwordTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.passwordTextbox.Name = "passwordTextbox";
             this.passwordTextbox.PasswordChar = '•';
-            this.passwordTextbox.Size = new System.Drawing.Size(216, 13);
+            this.passwordTextbox.Size = new System.Drawing.Size(262, 13);
             this.passwordTextbox.TabIndex = 8;
             this.passwordTextbox.TextChanged += new System.EventHandler(this.passwordTextbox_TextChanged);
             // 
@@ -195,20 +191,20 @@
             this.userNameTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
             this.userNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.userNameTextBox.ForeColor = System.Drawing.Color.Black;
-            this.userNameTextBox.Location = new System.Drawing.Point(25, 327);
+            this.userNameTextBox.Location = new System.Drawing.Point(34, 311);
             this.userNameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.userNameTextBox.Name = "userNameTextBox";
-            this.userNameTextBox.Size = new System.Drawing.Size(216, 13);
+            this.userNameTextBox.Size = new System.Drawing.Size(262, 13);
             this.userNameTextBox.TabIndex = 5;
             this.userNameTextBox.TextChanged += new System.EventHandler(this.userNameTextBox_TextChanged);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DimGray;
-            this.panel1.Location = new System.Drawing.Point(25, 344);
+            this.panel1.Location = new System.Drawing.Point(34, 328);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(216, 1);
+            this.panel1.Size = new System.Drawing.Size(262, 1);
             this.panel1.TabIndex = 4;
             // 
             // label1
@@ -216,7 +212,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(22, 308);
+            this.label1.Location = new System.Drawing.Point(31, 292);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 17);
@@ -228,7 +224,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(20, 185);
+            this.label3.Location = new System.Drawing.Point(29, 169);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 29);
@@ -238,6 +234,7 @@
             // userPanel
             // 
             this.userPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.userPanel.Controls.Add(this.pictureBox3);
             this.userPanel.Controls.Add(this.label4);
             this.userPanel.Controls.Add(this.pictureBox2);
             this.userPanel.Controls.Add(this.logoutButton);
@@ -247,11 +244,10 @@
             this.userPanel.Controls.Add(this.label6);
             this.userPanel.Controls.Add(this.label7);
             this.userPanel.Controls.Add(this.userLabel);
-            this.userPanel.Controls.Add(this.imageBox2);
-            this.userPanel.Location = new System.Drawing.Point(1, 2);
+            this.userPanel.Location = new System.Drawing.Point(1, -6);
             this.userPanel.Margin = new System.Windows.Forms.Padding(2);
             this.userPanel.Name = "userPanel";
-            this.userPanel.Size = new System.Drawing.Size(744, 520);
+            this.userPanel.Size = new System.Drawing.Size(744, 528);
             this.userPanel.TabIndex = 15;
             // 
             // label4
@@ -374,16 +370,58 @@
             this.userLabel.TabIndex = 2;
             this.userLabel.Text = "User";
             // 
-            // imageBox2
+            // failedLoginLabel
             // 
-            this.imageBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("imageBox2.BackgroundImage")));
-            this.imageBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imageBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("imageBox2.InitialImage")));
-            this.imageBox2.Location = new System.Drawing.Point(0, 0);
-            this.imageBox2.Name = "imageBox2";
-            this.imageBox2.Size = new System.Drawing.Size(747, 50);
-            this.imageBox2.TabIndex = 12;
-            this.imageBox2.TabStop = false;
+            this.failedLoginLabel.AutoSize = true;
+            this.failedLoginLabel.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.failedLoginLabel.ForeColor = System.Drawing.Color.Red;
+            this.failedLoginLabel.Location = new System.Drawing.Point(30, 255);
+            this.failedLoginLabel.Name = "failedLoginLabel";
+            this.failedLoginLabel.Size = new System.Drawing.Size(191, 13);
+            this.failedLoginLabel.TabIndex = 23;
+            this.failedLoginLabel.Text = "An error has occured when logging in";
+            // 
+            // failedLoginLabel2
+            // 
+            this.failedLoginLabel2.AutoSize = true;
+            this.failedLoginLabel2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.failedLoginLabel2.ForeColor = System.Drawing.Color.Red;
+            this.failedLoginLabel2.Location = new System.Drawing.Point(30, 268);
+            this.failedLoginLabel2.Name = "failedLoginLabel2";
+            this.failedLoginLabel2.Size = new System.Drawing.Size(222, 13);
+            this.failedLoginLabel2.TabIndex = 24;
+            this.failedLoginLabel2.Text = "Please check if all fields are filled correctly";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(340, 153);
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(-1, -2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(745, 50);
+            this.pictureBox3.TabIndex = 21;
+            this.pictureBox3.TabStop = false;
+            // 
+            // loadingGif
+            // 
+            this.loadingGif.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.loadingGif.Image = ((System.Drawing.Image)(resources.GetObject("loadingGif.Image")));
+            this.loadingGif.Location = new System.Drawing.Point(33, 411);
+            this.loadingGif.Name = "loadingGif";
+            this.loadingGif.Size = new System.Drawing.Size(27, 25);
+            this.loadingGif.TabIndex = 26;
+            this.loadingGif.TabStop = false;
             // 
             // LoginForm
             // 
@@ -400,12 +438,13 @@
             this.Text = "TURDS";
             this.loginPanel.ResumeLayout(false);
             this.loginPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imageBox1)).EndInit();
             this.userPanel.ResumeLayout(false);
             this.userPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loadingGif)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -429,12 +468,15 @@
         private System.Windows.Forms.Button attendanceButton;
         private System.Windows.Forms.Button logoutButton;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private Emgu.CV.UI.ImageBox imageBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
-        private Emgu.CV.UI.ImageBox imageBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label failedLoginLabel2;
+        private System.Windows.Forms.Label failedLoginLabel;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox loadingGif;
     }
 }

@@ -23,7 +23,7 @@ namespace lab_facial_recognition_forms
 
             
             this.Text = "T.U.R.D.S. (Tiny User Recognition and Designator System)";
-            this.Size = new System.Drawing.Size(270, 520);
+            this.Size = new System.Drawing.Size(340, 520);
             this.MaximizeBox = false;
             
 
@@ -39,7 +39,12 @@ namespace lab_facial_recognition_forms
                 }
             };
 
+            failedLoginLabel.Hide();
+            failedLoginLabel2.Hide();
 
+            //loading gif hide on execute
+            loadingGif.Hide();
+            
 
         }
 
@@ -60,9 +65,18 @@ namespace lab_facial_recognition_forms
         private void loginButton_Click(object sender, EventArgs e)
         {
             //MessageBox.Show("you have logged in boyo");
-            if (userNameTextBox.Text == "" || passwordTextbox.Text == "")
+            //if (userNameTextBox.Text == "" || passwordTextbox.Text == "")
+            //{
+            //    //MessageBox.Show("Please fill out ALL fields");
+            //}
+            //loadingGif.Show();
+            if (userNameTextBox.Text != "Admin")
             {
-                MessageBox.Show("Please fill out ALL fields");
+                comboBox1.SelectedItem = "User";
+            }
+            else
+            {
+                comboBox1.SelectedItem = "Admin";
             }
 
             SqlConnection con = new SqlConnection(connectionString);
@@ -78,16 +92,31 @@ namespace lab_facial_recognition_forms
                 {
                     if (dt.Rows[i]["UserType"].ToString() == cmbItemsValue)
                     {
-                        MessageBox.Show($"You are Logging as: {dt.Rows[i][2]}");
+                        //MessageBox.Show($"You are Logging as: {dt.Rows[i][2]}");
+
+                        
+                        
+
+                        //logging in as ADMIN
                         if (comboBox1.SelectedIndex == 0)
                         {
+                            
+                            failedLoginLabel.Hide();
+                            failedLoginLabel2.Hide();
+
                             passwordTextbox.Clear();
                             var form1 = new Form1();
                             form1.Show();
+                            form1.Size = new System.Drawing.Size(770, 845);
+                            Center(form1);
                         }
                         else
                         {
+                            //logging in as USER
                             //goes into user panel
+                            failedLoginLabel.Hide();
+                            failedLoginLabel2.Hide();
+
                             loginPanel.SendToBack();
                             userPanel.BringToFront();
                             passwordTextbox.Clear();
@@ -102,15 +131,19 @@ namespace lab_facial_recognition_forms
             }
             else
             {
-                MessageBox.Show("Error!");
+                //MessageBox.Show("Error!");
+                failedLoginLabel.Show();
+                failedLoginLabel2.Show();
+
+                userNameTextBox.Focus();
+                userNameTextBox.SelectAll();
+                passwordTextbox.Clear();
+
             }
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        
 
         private void SqlShow()
         {
@@ -133,7 +166,7 @@ namespace lab_facial_recognition_forms
         private void logoutButton_Click(object sender, EventArgs e)
         {
             //dataGridView1.Rows.Clear();
-            this.Size = new System.Drawing.Size(270, 520);
+            this.Size = new System.Drawing.Size(340, 520);
             Center(this);
             userPanel.SendToBack();
             loginPanel.BringToFront();
@@ -142,6 +175,8 @@ namespace lab_facial_recognition_forms
             userNameTextBox.Clear();
             passwordTextbox.Clear();
         }
+
+      
 
         private void userNameTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -166,6 +201,16 @@ namespace lab_facial_recognition_forms
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
