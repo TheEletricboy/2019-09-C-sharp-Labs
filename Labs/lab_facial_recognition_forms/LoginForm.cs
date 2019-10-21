@@ -170,6 +170,7 @@ namespace lab_facial_recognition_forms
             Center(this);
             userPanel.SendToBack();
             loginPanel.BringToFront();
+            dataGridView1.ClearSelection();
             
 
             userNameTextBox.Clear();

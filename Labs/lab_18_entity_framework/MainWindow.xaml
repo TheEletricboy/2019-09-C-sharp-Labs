@@ -50,7 +50,7 @@
         <Label x:Name="Label04" Foreground="White" Grid.Row="4" Grid.Column="0"  Content="Address" FontFamily="Arial" FontSize="15" 
          HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
 
-        <TextBox x:Name="txtFirstName" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Margin="10,0,10,10" Height="27" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="txtFirstName" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Margin="10,0,10,10" Height="27" VerticalAlignment="Bottom" TextChanged="txtFirstName_TextChanged"/>
         <TextBox x:Name="txtLastName" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Margin="10,10,10,0" Height="27" VerticalAlignment="Top"/>
         <TextBox x:Name="txtCity" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Margin="10,10,10,0" Height="27" VerticalAlignment="Top"/>
         <TextBox x:Name="txtAddress" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" Margin="10,10,10,0" Height="27" VerticalAlignment="Top"/>

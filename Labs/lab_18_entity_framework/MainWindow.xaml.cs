@@ -95,5 +95,10 @@ namespace lab_18_entity_framework
         {
             
         }
+
+        private void txtFirstName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
