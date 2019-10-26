@@ -245,7 +245,7 @@
             // dgv1
             // 
             this.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv1.Location = new System.Drawing.Point(58, 507);
+            this.dgv1.Location = new System.Drawing.Point(42, 456);
             this.dgv1.Name = "dgv1";
             this.dgv1.RowHeadersWidth = 51;
             this.dgv1.Size = new System.Drawing.Size(405, 203);
@@ -256,7 +256,7 @@
             // 
             this.deleteButton.BackColor = System.Drawing.Color.Salmon;
             this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deleteButton.Location = new System.Drawing.Point(57, 761);
+            this.deleteButton.Location = new System.Drawing.Point(41, 710);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(60, 26);
             this.deleteButton.TabIndex = 19;
@@ -269,7 +269,7 @@
             this.textboxDelete.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textboxDelete.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textboxDelete.ForeColor = System.Drawing.Color.DimGray;
-            this.textboxDelete.Location = new System.Drawing.Point(58, 736);
+            this.textboxDelete.Location = new System.Drawing.Point(42, 685);
             this.textboxDelete.Name = "textboxDelete";
             this.textboxDelete.Size = new System.Drawing.Size(168, 13);
             this.textboxDelete.TabIndex = 20;
@@ -280,7 +280,7 @@
             this.label2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(55, 720);
+            this.label2.Location = new System.Drawing.Point(39, 669);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(185, 13);
             this.label2.TabIndex = 21;
@@ -307,7 +307,7 @@
             this.label9.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.DimGray;
-            this.label9.Location = new System.Drawing.Point(52, 467);
+            this.label9.Location = new System.Drawing.Point(36, 416);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(303, 39);
             this.label9.TabIndex = 27;
@@ -439,7 +439,7 @@
             this.displayDataButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.displayDataButton.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.displayDataButton.ForeColor = System.Drawing.Color.DimGray;
-            this.displayDataButton.Location = new System.Drawing.Point(354, 717);
+            this.displayDataButton.Location = new System.Drawing.Point(338, 666);
             this.displayDataButton.Name = "displayDataButton";
             this.displayDataButton.Size = new System.Drawing.Size(109, 32);
             this.displayDataButton.TabIndex = 18;
@@ -461,7 +461,7 @@
             // 
             this.pictureBox11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox11.BackgroundImage")));
             this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox11.Location = new System.Drawing.Point(58, 753);
+            this.pictureBox11.Location = new System.Drawing.Point(42, 702);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(168, 2);
             this.pictureBox11.TabIndex = 39;
@@ -473,7 +473,7 @@
             this.label10.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label10.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.DimGray;
-            this.label10.Location = new System.Drawing.Point(4, 792);
+            this.label10.Location = new System.Drawing.Point(11, 739);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(164, 13);
