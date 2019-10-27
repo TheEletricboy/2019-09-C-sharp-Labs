@@ -21,7 +21,7 @@ namespace lab_facial_recognition_forms
 
             //userPanel.Hide();
 
-            
+            loginPanel.BringToFront();
             this.Text = "T.U.R.D.S. (Tiny User Recognition and Designator System)";
             this.Size = new System.Drawing.Size(340, 520);
             this.MaximizeBox = false;
@@ -39,11 +39,18 @@ namespace lab_facial_recognition_forms
                 }
             };
 
+            userNameTextBox.KeyDown += (sender, args) => {
+                if (args.KeyCode == Keys.Return)
+                {
+                    loginButton.PerformClick();
+                }
+            };
+
             failedLoginLabel.Hide();
             failedLoginLabel2.Hide();
 
             //loading gif hide on execute
-            loadingGif.Hide();
+            //loadingGifPanel.Hide();
             
 
         }
@@ -69,7 +76,11 @@ namespace lab_facial_recognition_forms
             //{
             //    //MessageBox.Show("Please fill out ALL fields");
             //}
-            //loadingGif.Show();
+
+
+            //loadingGifPanel.Show();
+            //System.Threading.Thread.Sleep(800);
+
             if (userNameTextBox.Text != "Admin")
             {
                 comboBox1.SelectedItem = "User";
@@ -109,6 +120,8 @@ namespace lab_facial_recognition_forms
                             form1.Show();
                             form1.Size = new System.Drawing.Size(770, 845);
                             Center(form1);
+
+                            //loadingGifPanel.SendToBack();
                         }
                         else
                         {
@@ -117,13 +130,15 @@ namespace lab_facial_recognition_forms
                             failedLoginLabel.Hide();
                             failedLoginLabel2.Hide();
 
-                            loginPanel.SendToBack();
-                            userPanel.BringToFront();
+                            loginPanel.Hide();
+                            userPanel.Show();
                             passwordTextbox.Clear();
                             //turns UserLabel into user
                             userLabel.Text = dt.Rows[i][2].ToString();
                             this.Size = new System.Drawing.Size(744, 520);
                             Center(this);
+
+                            //loadingGifPanel.Hide();
 
                         }
                     }
@@ -131,6 +146,7 @@ namespace lab_facial_recognition_forms
             }
             else
             {
+                //if login FAILED
                 //MessageBox.Show("Error!");
                 failedLoginLabel.Show();
                 failedLoginLabel2.Show();
@@ -138,6 +154,9 @@ namespace lab_facial_recognition_forms
                 userNameTextBox.Focus();
                 userNameTextBox.SelectAll();
                 passwordTextbox.Clear();
+                System.Threading.Thread.Sleep(500);
+
+                //loadingGifPanel.Hide();
 
             }
 
@@ -165,11 +184,11 @@ namespace lab_facial_recognition_forms
 
         private void logoutButton_Click(object sender, EventArgs e)
         {
-            //dataGridView1.Rows.Clear();
+            
             this.Size = new System.Drawing.Size(340, 520);
             Center(this);
-            userPanel.SendToBack();
-            loginPanel.BringToFront();
+            userPanel.Hide();
+            loginPanel.Show();
             dataGridView1.ClearSelection();
             
 
@@ -212,6 +231,21 @@ namespace lab_facial_recognition_forms
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            
+            
+        }
+        private void button5_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
